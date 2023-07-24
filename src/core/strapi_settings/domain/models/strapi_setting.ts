@@ -1,5 +1,5 @@
 import type { ConstructorType } from "@/src/common/interfaces/constructor_type";
-import {StrapiSettingAttributes} from "@/src/core/strapi_settings/domain/models/strapi_setting_attributes";
+import type {StrapiSettingAttributes} from "@/src/core/strapi_settings/domain/models/strapi_setting_attributes";
 
 export class StrapiSetting {
     id: string;

@@ -13,8 +13,6 @@ import { locator } from "@/src/core/app/ioc";
 import type { TagManagerService } from "@front_web_mrmilu/services";
 import { TYPES } from "@/src/core/app/ioc/types";
 import { number, object, string } from "yup";
-import {IocProvider} from "@/src/core/app/ioc/interfaces";
-import {GetUsersUseCase} from "@/src/core/users/domain/use_cases/get_users_use_case";
 
 
 interface FormValues {

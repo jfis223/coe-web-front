@@ -20,10 +20,6 @@ build:
 start:
     ./nvm_exec.sh yarn start
 
-# Downloads schema and generates corresponding ts types
-graphql-codegen:
-    ./nvm_exec.sh yarn graphql
-
 # Proxy comand through nvm
 nvm-exec command:
     ./nvm_exec.sh {{command}}

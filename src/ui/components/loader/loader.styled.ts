@@ -7,8 +7,8 @@ const LoaderStyled = styled.div`
   width: ${px2rem(10)};
   height: ${px2rem(10)};
   border-radius: ${px2rem(5)};
-  background-color: ${colors.gray70};
-  color: ${colors.gray70};
+  background-color: ${colors.codGray};
+  color: ${colors.codGray};
   animation: dot-flashing 1s infinite linear alternate;
   animation-delay: 0.5s;
 
@@ -25,8 +25,8 @@ const LoaderStyled = styled.div`
     width: ${px2rem(10)};
     height: ${px2rem(10)};
     border-radius: ${px2rem(5)};
-    background-color: ${colors.gray70};
-    color: ${colors.gray70};
+    background-color: ${colors.codGray};
+    color: ${colors.codGray};
     animation: dot-flashing 1s infinite alternate;
     animation-delay: 0s;
   }
@@ -36,20 +36,20 @@ const LoaderStyled = styled.div`
     width: ${px2rem(10)};
     height: ${px2rem(10)};
     border-radius: ${px2rem(5)};
-    background-color: ${colors.gray70};
-    color: ${colors.gray70};
+    background-color: ${colors.codGray};
+    color: ${colors.codGray};
     animation: dot-flashing 1s infinite alternate;
     animation-delay: 1s;
   }
 
   @keyframes dot-flashing {
     0% {
-      background-color: ${colors.gray70};
+      background-color: ${colors.codGray};
     }
 
     50%,
     100% {
-      background-color: ${colors.gray40};
+      background-color: ${colors.codGray};
     }
   }
 `;

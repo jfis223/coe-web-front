@@ -7,10 +7,6 @@ export class EnvVars implements IEnvVars {
       ? `${process.env.NEXT_PUBLIC_STRAPI_URL}`
       : "localhost:1337";
 
-  serverUrl: string = process.env.NEXT_PUBLIC_API_URL
-    ? `${process.env.NEXT_PUBLIC_API_URL}${this.isProduction ? "/api" : "/s/graphql/"}`
-    : "localhost:3000/s/graphql/";
-
   anotherServiceUrl: string = process.env.NEXT_PUBLIC_ANOTHER_API_URL
     ? `${process.env.NEXT_PUBLIC_ANOTHER_API_URL}${this.isProduction ? "" : "/rest"}`
     : "localhost:3000/rest/";

@@ -16,11 +16,11 @@ const Wrapper = styled.div`
     justify-content: center;
     width: 80%;
     height: 80%;
-    background-color: ${colors.gray20};
+    background-color: ${colors.codGray};
     margin: auto;
     box-shadow: ${shadows.one};
     border-radius: ${px2rem(6)};
-    color: ${colors.gray80};
+    color: ${colors.codGray};
   }
 `;
 

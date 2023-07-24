@@ -36,7 +36,7 @@ const Avatar = styled.div`
   height: ${px2rem(65)};
   border-radius: 100%;
   flex: 0 0 auto;
-  background-color: ${colors.gray30};
+  background-color: ${colors.codGray};
 `;
 
 const SimpleCardStyled = {

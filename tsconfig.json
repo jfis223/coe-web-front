@@ -24,7 +24,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "files": ["src/common/@types/graphql.d.ts"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

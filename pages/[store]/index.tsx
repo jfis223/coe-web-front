@@ -1,4 +1,4 @@
-import {ReactElement} from "react";
+import type {ReactElement} from "react";
 import {BaseLayout} from "@/src/ui/components/base_layout/base_layout";
 import {AppErrorBoundary} from "@/src/ui/components/app_error_boundary/app_error_boundary";
 

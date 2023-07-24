@@ -23,13 +23,13 @@ const Input = styled.label`
 
   & > input {
     padding: ${px2rem(spacing.size1)};
-    border: ${px2rem(1)} solid ${colors.gray60};
+    border: ${px2rem(1)} solid ${colors.codGray};
     border-radius: ${px2rem(4)};
 
     &:focus {
       outline: none;
       border-radius: ${px2rem(4)};
-      box-shadow: 0 0 0 ${px2rem(2)} ${colors.gray30};
+      box-shadow: 0 0 0 ${px2rem(2)} ${colors.codGray};
       transition: 0.1s;
     }
 
@@ -43,7 +43,7 @@ const Input = styled.label`
 `;
 
 const Error = styled.div`
-  color: ${colors.gray60};
+  color: ${colors.codGray};
 `;
 
 const InputStyled = {

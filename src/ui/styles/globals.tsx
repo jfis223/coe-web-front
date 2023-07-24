@@ -7,14 +7,14 @@ import { px2rem } from "@/src/ui/styles/utils";
 
 const Styles = createGlobalStyle`
   body {
-    background-color: ${colors.gray10};
+    background-color: ${colors.codGray};
   }
 
   * {
-    ${fonts.Lato};
+    ${fonts.NeueHaasGrotesk};
 
     &:focus {
-      outline: ${px2rem(2)} solid ${colors.gray40};
+      outline: ${px2rem(2)} solid ${colors.codGray};
     }
   }
 

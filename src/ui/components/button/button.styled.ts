@@ -6,7 +6,7 @@ import { spacing } from "@/src/ui/styles/spacing";
 
 const Wrapper = styled.button<ButtonProps>`
   border-radius: ${px2rem(16)};
-  background-color: ${(props) => (props.disabled ? colors.gray20 : colors.gray90)};
+  background-color: ${(props) => (props.disabled ? colors.codGray : colors.codGray)};
   border: none;
   padding: ${px2rem(spacing.size2)} ${px2rem(spacing.size4)};
   color: ${colors.white};
@@ -14,7 +14,7 @@ const Wrapper = styled.button<ButtonProps>`
 
   &:hover,
   &:focus {
-    background-color: ${(props) => (props.disabled ? colors.gray20 : colors.gray70)};
+    background-color: ${(props) => (props.disabled ? colors.codGray : colors.codGray)};
   }
 `;
 

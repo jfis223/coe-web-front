@@ -22,11 +22,11 @@ const Switch = styled.label`
     height: 0;
 
     &:checked + span {
-      background-color: ${colors.gray80};
+      background-color: ${colors.codGray};
     }
 
     &:focus + span {
-      box-shadow: 0 0 ${px2rem(1)} ${colors.gray80};
+      box-shadow: 0 0 ${px2rem(1)} ${colors.codGray};
     }
 
     &:checked + span:before {
@@ -41,7 +41,7 @@ const Switch = styled.label`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${colors.gray40};
+    background-color: ${colors.codGray};
     transition: 0.4s;
     border-radius: ${px2rem(20)};
 

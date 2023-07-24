@@ -19,7 +19,7 @@ const Wrapper = styled.button`
   }
 
   &:hover {
-    background-color: ${colors.gray10};
+    background-color: ${colors.codGray};
   }
 `;
 

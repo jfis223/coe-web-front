@@ -7,7 +7,6 @@ const {
   NEXT_PUBLIC_SENTRY_ENABLED,
   NODE_ENV,
   NEXT_PUBLIC_API_URL,
-  NEXT_PUBLIC_GRAPHQL_PROXY_ENDPOINT,
   NEXT_PUBLIC_REST_PROXY_ENDPOINT,
   SENTRY_ORG,
   SENTRY_PROJECT,
@@ -26,10 +25,6 @@ const moduleExports = {
     const DEFAULT_REWRITES = [];
     return !(NODE_ENV === "production")
       ? [
-          {
-            source: "/s/graphql",
-            destination: `${NEXT_PUBLIC_GRAPHQL_PROXY_ENDPOINT}/api`
-          },
           {
             source: "/rest/:path*",
             destination: `${NEXT_PUBLIC_REST_PROXY_ENDPOINT}/:path*`
@@ -68,17 +63,6 @@ const moduleExports = {
     ];
   },
   webpack: (config, options) => {
-    config.module.rules.push({
-      test: /\.(graphql|gql)$/,
-      include: [options.dir],
-      exclude: /node_modules/,
-      use: [
-        {
-          loader: "graphql-tag/loader"
-        }
-      ]
-    });
-
     return config;
   }
 };
