@@ -6,6 +6,7 @@ export const TYPES = {
   GetCMSPagesUseCase: Symbol("GetCMSPagesUseCase"),
   ICMSSettingsRepository: Symbol("ICMSSettingsRepository"),
   GetCMSSettingUseCase: Symbol("GetCMSSettingUseCase"),
+  GetCMSPageBySlugUseCase: Symbol("GetCMSPageBySlugUseCase"),
 
   TagManagerService: Symbol("TagManagerService"),
   JSONPlaceholderService: Symbol("JSONPlaceholderService"),

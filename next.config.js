@@ -22,16 +22,21 @@ const moduleExports = {
   },
   reactStrictMode: true,
   async rewrites() {
-    const DEFAULT_REWRITES = [];
+    const DEFAULT_REWRITES = [
+          {
+            source: '/',
+            destination: '/home',
+          }
+    ];
     return !(NODE_ENV === "production")
-      ? [
+      ? {beforeFiles: [
           {
             source: "/rest/:path*",
             destination: `${NEXT_PUBLIC_REST_PROXY_ENDPOINT}/:path*`
           },
           ...DEFAULT_REWRITES
-        ]
-      : [...DEFAULT_REWRITES];
+        ]}
+      : {beforeFiles: [...DEFAULT_REWRITES]};
   },
   i18n,
   images: {

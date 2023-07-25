@@ -7,7 +7,7 @@ export default Page500;
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale || "es-ES"))
+      ...(await serverSideTranslations(locale || "es"))
       // Will be passed to the page component as props
     }
   };

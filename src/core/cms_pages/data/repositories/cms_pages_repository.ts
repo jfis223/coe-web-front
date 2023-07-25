@@ -25,4 +25,16 @@ export class CMSPagesRepository implements ICMSPagesRepository {
         return CMSResponseDataModel.create(CMSPageDataModel, response).toDomain();
     }
 
+    async getPageBySlug(slug: string, locale: string): Promise<CMSResponse<CMSPage>> {
+        const service = await this.apiServiceProvider();
+        const response = await service.get<CMSData<CMSPage>>(`${this.baseUrl}`, {
+            params: {
+                locale: locale,
+                'filters[$and][0][slug][$eq]': slug,
+                populate: 'deep'
+            }
+        });
+        return CMSResponseDataModel.create(CMSPageDataModel, response).toDomain();
+    }
+
 }
