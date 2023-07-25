@@ -1,5 +1,4 @@
 import type { ConstructorType } from "@/src/common/interfaces/constructor_type";
-import type {StoreModel} from "@/src/core/app/domain/models/store/store";
 import type {StrapiPageBlock} from "@/src/core/strapi_pages/domain/models/strapi_page_blocks";
 import type {StrapiMetadata} from "@/src/core/strapi_blocks/domain/models/items/strapi_metadata";
 import type {StrapiPublishDate} from "@/src/core/strapi_blocks/domain/models/items/strapi_publish_date";
@@ -9,7 +8,6 @@ export class StrapiPageAttributes {
     active: boolean;
     locale: string;
     blocks: StrapiPageBlock[];
-    store: StoreModel;
     metaData: StrapiMetadata;
     createdAt: Date;
     updatedAt: Date;
@@ -20,7 +18,6 @@ export class StrapiPageAttributes {
         this.slug = input.slug;
         this.active = input.active;
         this.locale = input.locale;
-        this.store = input.store;
         this.blocks = input.blocks;
         this.metaData = input.metaData;
         this.createdAt = input.createdAt;

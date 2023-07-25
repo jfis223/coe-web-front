@@ -7,7 +7,6 @@ import { LoggingModal } from "@/src/ui/components/logging_modal/logging_modal";
 import { CookieUtils } from "@front_web_mrmilu/utils";
 import { useUiProvider } from "@/src/ui/providers/ui.provider";
 import {useIsMobileProvider} from "@/src/ui/providers/is_mobile.provider";
-import {Menu, Close, Logo} from "@/src/ui/icons";
 
 export const BaseLayout = ({ children }: PropsWithChildren<{ logged?: boolean }>) => {
   const isMobile = useIsMobileProvider((state) => state.isMobile);
@@ -36,10 +35,9 @@ export const BaseLayout = ({ children }: PropsWithChildren<{ logged?: boolean }>
     <Styled.Wrapper>
       <Styled.Nav>
         <Styled.MainHeaderWrapper>
-          {isMobile && <Styled.MainHeaderMobileMenu onClick={setShowMobileMenu}> {showMobileMenu ? <Close /> : <Menu />} </Styled.MainHeaderMobileMenu>}
           {!isMobile && <Styled.MainHeaderCategories>TODO</Styled.MainHeaderCategories>}
           <Styled.MainLogo>
-            <Logo />
+
           </Styled.MainLogo>
           <Styled.MainHeaderRightWrapper>TODO</Styled.MainHeaderRightWrapper>
         </Styled.MainHeaderWrapper>
