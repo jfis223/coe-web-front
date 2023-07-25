@@ -42,9 +42,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="preload" href="/assets/fonts/ITCGaramondStd-LtCond.otf" as="font" type="font/truetype" />
-          <link rel="preload" href="/assets/fonts/ITCGaramondStd-LtCondIta.otf" as="font" type="font/truetype" />
-          <link rel="preload" href="/assets/fonts/NeueHaasDisplayRoman.ttf" as="font" type="font/truetype" />
+          <link rel="preload" href="/assets/fonts/Plein-Bold.otf" as="font" type="font/truetype" />
+          <link rel="preload" href="/assets/fonts/Plein-BoldItalic.otf" as="font" type="font/truetype" />
+          <link rel="preload" href="/assets/fonts/Switzer-Italic.otf" as="font" type="font/truetype" />
+          <link rel="preload" href="/assets/fonts/Switzer-Regular.otf" as="font" type="font/truetype" />
         </Head>
         <body>
         <Main />

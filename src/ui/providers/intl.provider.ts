@@ -5,7 +5,7 @@ import { immer } from "zustand/middleware/immer";
 
 export const intlProvider = createStore<IntlStateViewModel>()(
     immer((set) => ({
-        locale: 'es-ES',
+        locale: 'es',
         setLocale(newLocale: string) {
             set((state) => {
                 state.locale = newLocale;

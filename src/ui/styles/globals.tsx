@@ -11,7 +11,7 @@ const Styles = createGlobalStyle`
   }
 
   * {
-    ${fonts.NeueHaasGrotesk};
+    ${fonts.Switzer};
 
     &:focus {
       outline: ${px2rem(2)} solid ${colors.codGray};

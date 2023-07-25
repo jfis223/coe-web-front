@@ -25,31 +25,31 @@ export interface Typography {
 
 // Body
 const bodyXs = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(12)};
   line-height: ${px2rem(14)};
   font-weight: 400;
 `;
 const bodyS = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(14)};
   line-height: ${px2rem(18)};
   font-weight: 400;
 `;
 const bodyM = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(16)};
   line-height: ${px2rem(20)};
   font-weight: 400;
 `;
 const bodyL = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(24)};
   line-height: ${px2rem(28)};
   font-weight: 400;
 `;
 const bodyXL = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(32)};
   line-height: ${px2rem(36)};
   font-weight: 400;
@@ -57,27 +57,27 @@ const bodyXL = css`
 
 // Heading
 const subHeading = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(48)};
   line-height: ${px2rem(52)};
   font-weight: 400;
 `;
 const headingS = css`
-  ${fonts.ITCGaramondCond};
+  ${fonts.Plein};
   font-size: ${px2rem(32)};
   line-height: ${px2rem(36)};
   letter-spacing: ${px2rem(-0.32)};
   font-weight: 300;
 `;
 const headingM = css`
-  ${fonts.ITCGaramondCond};
+  ${fonts.Plein};
   font-size: ${px2rem(56)};
   line-height: ${px2rem(52)};
   letter-spacing: ${px2rem(-0.56)};
   font-weight: 300;
 `;
 const headingL = css`
-  ${fonts.ITCGaramondCond};
+  ${fonts.Plein};
   font-size: ${px2rem(72)};
   line-height: ${px2rem(68)};
   letter-spacing: ${px2rem(-1.44)};
@@ -85,7 +85,7 @@ const headingL = css`
 `;
 
 const headingXL = css`
-  ${fonts.ITCGaramondCond};
+  ${fonts.Plein};
   font-size: ${px2rem(96)};
   line-height: ${px2rem(88)};
   letter-spacing: ${px2rem(-1.44)};
@@ -93,7 +93,7 @@ const headingXL = css`
 `;
 
 const heading2XL = css`
-  ${fonts.ITCGaramondCond};
+  ${fonts.Plein};
   font-size: ${px2rem(132)};
   line-height: ${px2rem(106)};
   letter-spacing: ${px2rem(-1.44)};
@@ -102,14 +102,14 @@ const heading2XL = css`
 
 //Specific
 const legal = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(10)};
   line-height: ${px2rem(14)};
   font-weight: 400;
 `;
 
 const detail = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(12)};
   line-height: ${px2rem(16)};
   font-weight: 400;
@@ -117,7 +117,7 @@ const detail = css`
 
 //Action
 const linkXs = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(12)};
   line-height: ${px2rem(16)};
   font-weight: 400;
@@ -125,7 +125,7 @@ const linkXs = css`
 `;
 
 const linkS = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(14)};
   line-height: ${px2rem(18)};
   font-weight: 400;
@@ -133,7 +133,7 @@ const linkS = css`
 `;
 
 const linkM = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(16)};
   line-height: ${px2rem(20)};
   font-weight: 400;
@@ -141,7 +141,7 @@ const linkM = css`
 `;
 
 const button = css`
-  ${fonts.NeueHaasGrotesk};
+  ${fonts.Switzer};
   font-size: ${px2rem(16)};
   line-height: ${px2rem(20)};
   font-weight: 400;

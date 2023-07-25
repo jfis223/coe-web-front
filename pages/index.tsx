@@ -1,19 +1,17 @@
-import type { GetServerSidePropsContext } from "next"
-import {storeProvider} from "@/src/ui/providers/store.provider";
+import type {ReactElement} from "react";
+import {BaseLayout} from "@/src/ui/components/base_layout/base_layout";
+import {AppErrorBoundary} from "@/src/ui/components/app_error_boundary/app_error_boundary";
 
-const Redirect = (): JSX.Element => {
-  return <></>
+const Page = () => {
+  return <div>TEST</div>
 }
 
-export async function getServerSideProps(context: GetServerSidePropsContext): Promise<any> {
-  const store = storeProvider.getState().store;
+export default Page;
 
-  return {
-    redirect: {
-      destination: `/${store}`,
-      permanent: false,
-    }
-  }
-}
-
-export default Redirect
+Page.getLayout = function getLayout(page: ReactElement) {
+  return (
+      <BaseLayout logged={page.props.logged}>
+        <AppErrorBoundary>{page}</AppErrorBoundary>
+      </BaseLayout>
+  );
+};
