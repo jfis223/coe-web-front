@@ -9,7 +9,7 @@ export class JSONPlaceholderService implements IRestDataSource {
   private readonly jsonPlaceholderClient: RestClient;
 
   constructor(@inject(TYPES.IEnvVars) envVars: IEnvVars) {
-    this.jsonPlaceholderClient = new RestClient(`${envVars.anotherServiceUrl}`);
+    this.jsonPlaceholderClient = new RestClient(`${envVars.cmsUrl}`);
   }
 
   async get<T = unknown>(url: string, { params }: RestDataSourceOptions = {}): Promise<T> {
