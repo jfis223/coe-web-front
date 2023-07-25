@@ -7,5 +7,5 @@ module.exports = {
         localeDetection: false
     },
     localePath: path.resolve("./public/assets/locales"),
-    defaultNS: "home"
+    defaultNS: "common"
 };
