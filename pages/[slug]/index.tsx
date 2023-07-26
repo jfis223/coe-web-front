@@ -7,8 +7,15 @@ import type {IocProvider} from "@/src/core/app/ioc/interfaces";
 import type {GetCMSPageBySlugUseCase} from "@/src/core/cms_pages/domain/use_cases/get_cms_page_by_slug_use_case";
 import {TYPES} from "@/src/core/app/ioc/types";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
+import type {CMSPage} from "@/src/core/cms_pages/domain/models/cms_page";
+import type {NextPageWithLayout} from "@/src/ui/@types/page";
 
-const Page = () => {
+type Props = {
+    page: CMSPage;
+};
+
+const Page: NextPageWithLayout  = ({page} : Props) => {
+    console.log(page)
     return <div>TEST</div>
 }
 
@@ -39,7 +46,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     const getPagesUseCase = await locator.get<IocProvider<GetCMSPageBySlugUseCase>>(TYPES.GetCMSPageBySlugUseCase)();
     const page = await getPagesUseCase.execute(params?.slug as string || 'home', locale || 'es');
-    console.log(page.data[0]);
     return {
         props: {
             page: JSON.parse(JSON.stringify(page.data[0])),

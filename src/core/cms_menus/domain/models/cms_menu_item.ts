@@ -1,15 +1,5 @@
 import type {ConstructorType} from "@/src/common/interfaces/constructor_type";
 
-export class CMSMenuItem {
-    id: number;
-    attributes: CMSMenuItemAttributes;
-
-    constructor(input: ConstructorType<CMSMenuItem>) {
-        this.id = input.id;
-        this.attributes = input.attributes;
-    }
-}
-
 export class CMSMenuItemAttributes {
     order: number;
     title: string;
@@ -25,5 +15,16 @@ export class CMSMenuItemAttributes {
         this.target = input.target;
         this.createdAt = input.createdAt;
         this.updatedAt = input.updatedAt;
+    }
+}
+
+
+export class CMSMenuItem {
+    id: number;
+    attributes: CMSMenuItemAttributes;
+
+    constructor(input: ConstructorType<CMSMenuItem>) {
+        this.id = input.id;
+        this.attributes = input.attributes;
     }
 }

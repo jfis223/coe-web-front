@@ -9,12 +9,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-
+  
   main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     padding: 0 ${px2rem(spacing.size4)};
+    max-width: ${px2rem(breakpoints.ml + 'px')};
+    margin: 0 auto;
   }
 `;
 
@@ -30,24 +32,22 @@ const Footer = styled.footer`
 
 const Nav = styled.nav`
   width: 100%;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.77);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 99;
   overflow: hidden;
   transition: all ease 400ms;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-`;
-
-const MainHeaderWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 45% 10% 45%;
-  background-color: white;
-  position: relative;
-  height: ${px2rem(64)};
-  max-width: ${breakpoints.lm}px;
+  height: ${px2rem(80)};
   margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 0  ${px2rem(16)};
 `;
 
 const MainHeaderMobileMenu = styled.div`
@@ -58,6 +58,12 @@ const MainHeaderMobileMenu = styled.div`
   cursor: pointer;
   ${activeAnimation};
   ${flexCenter};
+`;
+
+const MainHeader = styled.div`
+  max-width: ${px2rem(breakpoints.ml + 'px')};
+  width: 100%;
+  margin: 0 auto;
 `;
 
 const MainHeaderCategories = styled.div`
@@ -79,22 +85,10 @@ const MainHeaderCategories = styled.div`
 `;
 
 const MainLogo = styled.div`
-  width: ${px2rem(90)};
-  ${includeMedia(
-      "sm",
-      css`
-          width: ${px2rem(120)};
-        `
-  )};
+  width: ${px2rem(180)};
   ${flexCenter};
   svg {
-    width: ${px2rem(90)};
-    ${includeMedia(
-        "sm",
-        css`
-          width: ${px2rem(120)};
-        `
-    )};
+    width: ${px2rem(180)};
   }
 `;
 
@@ -110,7 +104,7 @@ const BaseLayoutStyled = {
   Wrapper,
   Footer,
   Nav,
-  MainHeaderWrapper,
+  MainHeader,
   MainHeaderMobileMenu,
   MainHeaderCategories,
   MainLogo,

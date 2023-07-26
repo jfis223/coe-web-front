@@ -1,13 +1,11 @@
 import type { ConstructorType } from "@/src/common/interfaces/constructor_type";
 import type {CMSMenuItem} from "@/src/core/cms_menus/domain/models/cms_menu_item";
 
-export class CMSMenu {
-    id: string;
-    attributes: CMSMenuAttributes;
+export class CMSMenuItemsData {
+    data: CMSMenuItem[];
 
-    constructor(input: ConstructorType<CMSMenu>) {
-        this.id = input.id;
-        this.attributes = input.attributes;
+    constructor(input: ConstructorType<CMSMenuItemsData>) {
+        this.data = input.data;
     }
 }
 
@@ -27,10 +25,13 @@ export class CMSMenuAttributes {
     }
 }
 
-export class CMSMenuItemsData {
-    data: CMSMenuItem[];
 
-    constructor(input: ConstructorType<CMSMenuItemsData>) {
-        this.data = input.data;
+export class CMSMenu {
+    id: string;
+    attributes: CMSMenuAttributes;
+
+    constructor(input: ConstructorType<CMSMenu>) {
+        this.id = input.id;
+        this.attributes = input.attributes;
     }
 }
