@@ -42,7 +42,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     return () => {
       window.removeEventListener('resize', () => setIsMobile(window.innerWidth))
     }
-  }, [])
+  }, [setIsMobile])
 
     return (
     <>
