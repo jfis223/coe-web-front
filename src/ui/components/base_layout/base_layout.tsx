@@ -1,11 +1,12 @@
 import type { PropsWithChildren } from "react";
 import Styled from "@/src/ui/components/base_layout/base_layout.styled";
-import React, {useEffect} from "react";
+import React from "react";
 import {useIsMobileProvider} from "@/src/ui/providers/is_mobile.provider";
-import {Logo, Envelope, _Gradient, WhatsApp} from "@/src/ui/icons";
+import {Logo, Menu, Close} from "@/src/ui/icons";
 import Link from "next/link";
 import type {CMSMenu} from "@/src/core/cms_menus/domain/models/cms_menu";
-import ReactWhatsapp from 'react-whatsapp';
+import {NavBarDesktopLinks} from "@/src/ui/components/navbar_desktop_links/navbar_desktop_links";
+import {NavBarMobileLinks} from "@/src/ui/components/navbar_mobile_links/navbar_mobile_links";
 
 export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMSMenu }>) => {
   const isMobile = useIsMobileProvider((state) => state.isMobile);
@@ -16,44 +17,21 @@ export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMS
     <Styled.Wrapper>
       <Styled.Nav>
           <Styled.MainHeader>
+              {isMobile &&
+                  <Styled.MenuIcon onClick={setShowMobileMenu}>
+                      {showMobileMenu ? <Close /> : <Menu />}
+                  </Styled.MenuIcon>
+              }
               <Link href="/">
                   <Styled.MainLogo>
                       <Logo />
                   </Styled.MainLogo>
               </Link>
-              <Styled.DesktopLinks>
-                  {header?.attributes?.items.data.map((item) =>
-                      <li key={item.id}>
-                          <Link
-                              className="underline"
-                              href={item.attributes.url ?? ""}
-                              target={item.attributes.target ?? ""}
-                          >
-                              {item.attributes.title}
-                          </Link>
-                      </li>
-                  )}
-                  <Styled.AnimatedIcon>
-                      <Link
-                        href={'/contacto'}
-                      >
-                          <Envelope />
-                          <_Gradient />
-                      </Link>
-                  </Styled.AnimatedIcon>
-                  <Styled.AnimatedIcon>
-                      <ReactWhatsapp
-                          number="1-212-736-5000"
-                          message="Hello World!!!"
-                          element={"button"}
-                      >
-                          <WhatsApp />
-                      </ReactWhatsapp>
-                  </Styled.AnimatedIcon>
-              </Styled.DesktopLinks>
+              <NavBarDesktopLinks header={header} />
           </Styled.MainHeader>
       </Styled.Nav>
-      <main>{children}</main>
+       {isMobile && showMobileMenu && <NavBarMobileLinks header={header} />}
+        <main>{children}</main>
       <Styled.Footer>cool footer</Styled.Footer>
     </Styled.Wrapper>
   );

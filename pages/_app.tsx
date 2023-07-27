@@ -44,6 +44,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     }
   }, [setIsMobile])
 
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
+  }, [])
+
     return (
     <>
       <Head>
