@@ -4,21 +4,21 @@ import {typography} from "@/src/ui/styles/typography";
 import {colors} from "@/src/ui/styles/colors";
 
 interface Props {
-  safeShowHide: boolean
+  state: any;
 }
 
 const MobileLinks = styled.ul<Props>`
   width: 100%;
   height: calc(100vh - ${px2rem(80)});
   position: fixed;
-  top: ${px2rem(80)};
   left: 0;
   ${flexCenter};
   flex-direction: column;
   gap: ${px2rem(40)};
   z-index: 50;
   background: linear-gradient(171deg, rgba(34,51,137,1) 0%, rgba(34,85,137,1) 100%);
-  //animation: slideIn ease-in-out .5s;
+  transition: top 500ms;
+  top: ${(props) => props.state === 'entered' ? `${px2rem(80)}` : `calc(-100vh - ${px2rem(80)})`};
   a.underline {
     ${typography.bodyL};
     text-decoration: none; 
@@ -43,10 +43,6 @@ const MobileLinks = styled.ul<Props>`
     &:hover {
       background-size: 0 3px, 100% 3px;
     }
-  }
-  @keyframes slideIn {
-    from { top: calc(-100vh - ${px2rem(80)}); }
-    to   { top: ${px2rem(80)}; }
   }
 `;
 

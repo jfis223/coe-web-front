@@ -30,7 +30,7 @@ export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMS
               <NavBarDesktopLinks header={header} />
           </Styled.MainHeader>
       </Styled.Nav>
-       {isMobile && showMobileMenu && <NavBarMobileLinks header={header} />}
+       {isMobile && <NavBarMobileLinks header={header} />}
         <main>{children}</main>
       <Styled.Footer>cool footer</Styled.Footer>
     </Styled.Wrapper>
