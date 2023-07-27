@@ -33,6 +33,7 @@
     "react-dom": "18.2.0",
     "react-i18next": "^13.0.1",
     "react-spring": "9.7.1",
+    "react-whatsapp": "^0.3.0",
     "reflect-metadata": "0.1.13",
     "styled-components": "5.3.9",
     "yup": "1.1.1",

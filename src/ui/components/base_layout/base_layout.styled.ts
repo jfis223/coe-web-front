@@ -4,6 +4,7 @@ import { px2rem, flexCenter } from "@/src/ui/styles/utils";
 import { spacing } from "../../styles/spacing";
 import { includeMedia, includeMaxMedia, breakpoints } from "@/src/ui/styles/breakpoints";
 import {activeAnimation} from "@/src/ui/styles/animations";
+import {typography} from "@/src/ui/styles/typography";
 
 const Wrapper = styled.div`
   display: flex;
@@ -64,6 +65,9 @@ const MainHeader = styled.div`
   max-width: ${px2rem(breakpoints.ml + 'px')};
   width: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 const MainHeaderCategories = styled.div`
@@ -99,11 +103,76 @@ const MainHeaderRightWrapper = styled.div`
   padding-left: ${px2rem(90)};
 `;
 
+const DesktopLinks = styled.ul`
+  ${flexCenter};
+  gap: ${px2rem(20)};
+  a.underline {
+    ${typography.linkM};
+    text-decoration: none; 
+    color: ${colors.main};
+    height: ${px2rem(23)};
+    display: grid;
+    background:
+        linear-gradient(
+            to right,
+            rgba(100, 200, 200, 0),
+            rgba(100, 200, 200, 0)
+        ),
+        linear-gradient(
+            to right,
+            rgba(34, 85, 137, 1),
+            rgba(125, 173, 221, 1)
+        );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+    &:hover {
+      background-size: 0 3px, 100% 3px;
+    }
+  }
+`;
+
+const AnimatedIcon = styled.li`
+    button {
+      border: none;
+      background-color: unset;
+      padding: unset;
+      width: ${px2rem(24)};
+      height: ${px2rem(27)};
+      cursor: pointer;
+    }
+    svg {
+      width: ${px2rem(24)};
+      height: ${px2rem(27)};
+      > * {
+        fill: ${colors.main};
+      }
+    }
+    a{
+      width: inherit;
+      height: inherit;
+    }
+    button:hover,
+    a:hover {
+      svg:not(#gradient) {
+        fill: url(#gradient) ${colors.main};
+        transition: fill 1s;
+        > * {
+          fill: url(#gradient) ${colors.main};
+          transition: fill 1s;
+        }
+      }
+    }
+`;
+
 
 const BaseLayoutStyled = {
   Wrapper,
   Footer,
   Nav,
+  DesktopLinks,
+  AnimatedIcon,
   MainHeader,
   MainHeaderMobileMenu,
   MainHeaderCategories,

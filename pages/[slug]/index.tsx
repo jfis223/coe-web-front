@@ -9,6 +9,7 @@ import {TYPES} from "@/src/core/app/ioc/types";
 import {serverSideTranslations} from "next-i18next/serverSideTranslations";
 import type {CMSPage} from "@/src/core/cms_pages/domain/models/cms_page";
 import type {NextPageWithLayout} from "@/src/ui/@types/page";
+import type {GetCMSMenuBySlugUseCase} from "@/src/core/cms_menus/domain/use_cases/get_cms_menu_by_slug_use_case";
 
 type Props = {
     page: CMSPage;
@@ -23,7 +24,7 @@ export default Page;
 
 Page.getLayout = function getLayout(page: ReactElement) {
     return (
-        <BaseLayout logged={page.props.logged}>
+        <BaseLayout header={page.props.menu?.header}>
             <AppErrorBoundary>{page}</AppErrorBoundary>
         </BaseLayout>
     );
@@ -34,21 +35,33 @@ export const getStaticPaths: GetStaticPaths = async () => {
         paths: [
             {
                 params: {
-                    slug: 'home',
+                    slug: 'home'
                 },
-            },
+            }
         ],
-        fallback: false,
+        fallback: true,
     }
 }
-
 
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     const getPagesUseCase = await locator.get<IocProvider<GetCMSPageBySlugUseCase>>(TYPES.GetCMSPageBySlugUseCase)();
     const page = await getPagesUseCase.execute(params?.slug as string || 'home', locale || 'es');
+    console.log(page, 'page')
+    if (page.data.length === 0) {
+        return {
+            notFound: true,
+        }
+    }
+
+    const getCMSMenuBySlugUseCase = await locator.get<IocProvider<GetCMSMenuBySlugUseCase>>(TYPES.GetCMSMenuBySlugUseCase)();
+    const headerMenu = await getCMSMenuBySlugUseCase.execute('header', locale || 'es');
+
     return {
         props: {
             page: JSON.parse(JSON.stringify(page.data[0])),
+            menu: {
+                header: JSON.parse(JSON.stringify(headerMenu.data[0]))
+            },
             ...(await serverSideTranslations(locale || "es"))
             // Will be passed to the page component as props
         },
