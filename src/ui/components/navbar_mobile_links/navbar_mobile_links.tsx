@@ -5,11 +5,9 @@ import type {PropsWithChildren} from "react";
 import type {CMSMenu} from "@/src/core/cms_menus/domain/models/cms_menu";
 import {useIsMobileProvider} from "@/src/ui/providers/is_mobile.provider";
 import { CSSTransition } from 'react-transition-group';
-import {useRef} from "react";
 
 export const NavBarMobileLinks = ({ header} : PropsWithChildren<{ header: CMSMenu }>) => {
     const showMobileMenu = useIsMobileProvider((state) => state.showMobileMenu);
-    const nodeRef = useRef<HTMLUListElement | null>(null);
 
     return (
         <CSSTransition in={showMobileMenu} timeout={500} mountOnEnter unmountOnExit>

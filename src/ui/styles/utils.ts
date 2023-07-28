@@ -10,7 +10,7 @@ export const px2rem = (target: string | number): string => {
 };
 
 export const wrapperStyles = css`
-  margin: ${px2rem(spacing.size4)} auto;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
   max-width: ${px2rem(breakpoints.lg)};

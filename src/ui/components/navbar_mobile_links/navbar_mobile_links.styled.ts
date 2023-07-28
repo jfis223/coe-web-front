@@ -2,9 +2,10 @@ import styled from "styled-components";
 import {flexCenter, px2rem} from "@/src/ui/styles/utils";
 import {typography} from "@/src/ui/styles/typography";
 import {colors} from "@/src/ui/styles/colors";
+import type {TransitionStatus} from "react-transition-group";
 
 interface Props {
-  state: any;
+  state: TransitionStatus;
 }
 
 const MobileLinks = styled.ul<Props>`

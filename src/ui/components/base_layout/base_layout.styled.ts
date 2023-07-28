@@ -8,12 +8,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  
+  background-color: ${colors.white};
+
   main {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 0 ${px2rem(spacing.size4)};
+    padding: ${px2rem(80)} ${px2rem(spacing.size4)} 0;
     max-width: ${px2rem(breakpoints.ml + 'px')};
     margin: 0 auto;
   }
