@@ -8,7 +8,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: ${colors.white};
+  position: relative;
+  //background-color: ${colors.white};
 
   main {
     flex: 1 0 auto;
@@ -17,6 +18,14 @@ const Wrapper = styled.div`
     padding: ${px2rem(80)} ${px2rem(spacing.size4)} 0;
     max-width: ${px2rem(breakpoints.ml + 'px')};
     margin: 0 auto;
+    z-index: 1;
+  }
+  canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: ${colors.white};
   }
 `;
 
@@ -28,6 +37,7 @@ const Footer = styled.footer`
   background-color: ${colors.white};
   color: ${colors.white};
   height: ${px2rem(120)};
+  z-index: 1;
 `;
 
 const Nav = styled.nav`

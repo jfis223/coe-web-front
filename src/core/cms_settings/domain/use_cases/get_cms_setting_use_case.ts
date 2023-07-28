@@ -7,8 +7,8 @@ import type {ICMSSettingsRepository} from "@/src/core/cms_settings/domain/interf
 export class GetCMSSettingUseCase {
     @inject(TYPES.ICMSSettingsRepository) private readonly provider!: IocProvider<ICMSSettingsRepository>;
 
-    async execute(store: string, locale: string) {
+    async execute() {
         const repository = await this.provider();
-        return repository.settings(store, locale);
+        return repository.settings();
     }
 }

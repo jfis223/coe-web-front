@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   ${wrapperStyles};
   display: flex;
   flex-direction: column;
-  background-color: ${colors.white};
   padding: ${px2rem(spacing.size4)};
   border-radius: ${px2rem(4)};
   gap: ${px2rem(spacing.size2)};

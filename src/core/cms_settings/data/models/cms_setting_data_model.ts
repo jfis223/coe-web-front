@@ -3,13 +3,17 @@ import {CMSSettingAttributesModel} from "@/src/core/cms_settings/data/models/cms
 import {CMSSetting} from "@/src/core/cms_settings/domain/models/cms_setting";
 
 export class CMSSettingDataModel {
-    @Expose() id!: string;
-    @Expose() @Type(() => CMSSettingAttributesModel) attributes!: CMSSettingAttributesModel;
+    @Expose() @Type(() => CMSSettingDataDataModel) data!: CMSSettingDataDataModel;
 
     toDomain(): CMSSetting {
         return new CMSSetting({
-            id: this.id,
-            attributes: this.attributes,
+            data: this.data,
         })
     }
+}
+
+
+export class CMSSettingDataDataModel {
+    @Expose() id!: string;
+    @Expose() @Type(() => CMSSettingAttributesModel) attributes!: CMSSettingAttributesModel;
 }

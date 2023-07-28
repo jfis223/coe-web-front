@@ -46,7 +46,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     const getPagesUseCase = await locator.get<IocProvider<GetCMSPageBySlugUseCase>>(TYPES.GetCMSPageBySlugUseCase)();
     const page = await getPagesUseCase.execute(params?.slug as string || 'home', locale || 'es');
-    console.log(page, 'page')
     if (page.data.length === 0) {
         return {
             notFound: true,
