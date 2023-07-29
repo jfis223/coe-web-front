@@ -55,7 +55,9 @@ const moduleExports = {
         headers: nextSafe({
           contentSecurityPolicy: {
             "default-src": "'self' 'coe-web-cms.fly.dev'",
-            "img-src": "'self' 'res.cloudinary.com'"
+            "img-src": "'self' 'res.cloudinary.com'",
+            "style-src": "'self' 'unsafe-inline'",
+            "script-src": "'self' 'unsafe-inline'"
           },
           isDev
         })
