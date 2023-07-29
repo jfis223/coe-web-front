@@ -9,10 +9,10 @@ import { GlobalStyles } from "@/src/ui/styles/globals";
 import { Modal } from "@/src/ui/components/modal/modal";
 import Head from "next/head";
 import "@/src/common/utils/yup_extensions";
-import {uiProvider} from "@/src/ui/providers/ui.provider";
-import {useIsMobileProvider} from "@/src/ui/providers/is_mobile.provider";
+import { uiProvider } from "@/src/ui/providers/ui.provider";
+import { useIsMobileProvider } from "@/src/ui/providers/is_mobile.provider";
 import { appWithTranslation } from "next-i18next";
-import {useEffect} from "react";
+import { useEffect } from "react";
 import getCMSSettingsController from "@/src/ui/controllers/get_cms_settings_controller";
 
 // Conditionally inject axe into the page.
@@ -39,29 +39,26 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const setIsMobile = useIsMobileProvider((state) => state.setIsMobile);
 
   useEffect(() => {
-    window.addEventListener('resize', () => setIsMobile(window.innerWidth));
+    window.addEventListener("resize", () => setIsMobile(window.innerWidth));
     return () => {
-      window.removeEventListener('resize', () => setIsMobile(window.innerWidth))
-    }
-  }, [setIsMobile])
+      window.removeEventListener("resize", () => setIsMobile(window.innerWidth));
+    };
+  }, [setIsMobile]);
 
   useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
-  }, [pageProps])
+    window.dispatchEvent(new Event("resize"));
+  }, [pageProps]);
 
   useEffect(() => {
-    window.dispatchEvent(new Event('resize'));
+    window.dispatchEvent(new Event("resize"));
     getCMSSettingsController().catch(console.error);
-  }, [])
+  }, []);
 
-    return (
+  return (
     <>
       <Head>
         <title>Next boilerplate app</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-        {process.env.NODE_ENV === "production" && (
-          <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; child-src 'none'; style-src 'unsafe-inline'; object-src 'none'" />
-        )}
         <meta httpEquiv="referrer" content="no-referrer, strict-origin-when-cross-origin" />
       </Head>
       <GlobalStyles />
