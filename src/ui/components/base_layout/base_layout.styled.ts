@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { colors } from "../../styles/colors";
 import { px2rem, flexCenter } from "@/src/ui/styles/utils";
-import { spacing } from "../../styles/spacing";
+//import { spacing } from "../../styles/spacing";
 import { includeMedia, includeMaxMedia, breakpoints } from "@/src/ui/styles/breakpoints";
 
 const Wrapper = styled.div`
@@ -15,8 +15,8 @@ const Wrapper = styled.div`
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    padding: ${px2rem(80)} ${px2rem(spacing.size4)} 0;
-    max-width: ${px2rem(breakpoints.ml + 'px')};
+    padding: ${px2rem(80)} 0;
+    max-width: ${px2rem(breakpoints.ml)};
     margin: 0 auto;
     z-index: 1;
     overflow-y: hidden;
@@ -42,6 +42,7 @@ const Footer = styled.footer`
 `;
 
 const Nav = styled.nav`
+  max-width: 100vw;
   width: 100%;
   background: rgba(255, 255, 255, 0.7);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

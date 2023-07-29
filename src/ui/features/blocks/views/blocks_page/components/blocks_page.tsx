@@ -6,7 +6,7 @@ import type {BlocksTypeOptions} from "@/src/ui/features/blocks/views/blocks_page
 import type {CMSBlock} from "@/src/core/cms_blocks/domain/models/cms_block";
 import {SliderBlock} from "@/src/ui/features/blocks/views/slider_block/components/slider_block";
 
-const componentMap: Record<BlocksTypeOptions, () => JSX.Element> = {
+const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
   "blocks.accordion": () => <h1>blocks.accordion</h1>,
   "blocks.gallery": () => <h1>blocks.gallery</h1>,
   "blocks.icon-text-list": () => <h1>blocks.icon-text-list</h1>,

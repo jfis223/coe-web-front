@@ -7,7 +7,8 @@ import { px2rem } from "@/src/ui/styles/utils";
 
 const Styles = createGlobalStyle`
   body {
-    background-color: ${colors.codGray};
+    background-color: ${colors.white};
+    overflow-x: hidden;
   }
 
   * {
