@@ -5,7 +5,6 @@ import { useSettingsProvider } from "@/src/ui/providers/settings.provider";
 import { Stage, Container, useApp } from "@pixi/react";
 import type { PixiRef } from "@pixi/react";
 import { useMemo } from "react";
-import "@pixi/unsafe-eval";
 
 type IContainer = PixiRef<typeof Container>;
 
