@@ -17,7 +17,7 @@ type Props = {
 };
 
 const Page: NextPageWithLayout  = ({page} : Props) => {
-    return <BlocksPage blocks={page.attributes.blocks} />
+    return <BlocksPage blocks={page?.attributes?.blocks} />
 }
 
 export default Page;

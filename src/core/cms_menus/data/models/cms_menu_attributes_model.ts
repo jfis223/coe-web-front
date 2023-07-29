@@ -3,7 +3,7 @@ import {Expose, Type} from "class-transformer";
 export class CMSMenuItemAttributesModel {
     @Expose() order!: number;
     @Expose() title!: string;
-    @Expose() slug!: string;
+    @Expose() url!: string;
     @Expose() target!: string;
     @Expose() @Type(() => Date) createdAt!: Date;
     @Expose() @Type(() => Date) updatedAt!: Date;

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Form } from "formik";
 import { px2rem, wrapperStyles } from "@/src/ui/styles/utils";
-import { colors } from "@/src/ui/styles/colors";
 import { spacing } from "@/src/ui/styles/spacing";
 
 const Wrapper = styled.div`

@@ -8,7 +8,7 @@ export default function Page500() {
 
 Page500.getLayout = function getLayout(page: ReactElement) {
   return (
-    <BaseLayout logged={page.props.logged}>
+    <BaseLayout header={page.props.header}>
       <AppErrorBoundary>{page}</AppErrorBoundary>
     </BaseLayout>
   );

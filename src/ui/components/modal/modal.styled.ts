@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 import { px2rem } from "@/src/ui/styles/utils";
 import { colors } from "../../styles/colors";
 import { IconButton } from "@/src/ui/components/icon_button/icon_button";
 
-const Wrapper = styled(animated.div)`
+const Wrapper = styled.div`
   position: fixed;
   display: flex;
   align-items: center;

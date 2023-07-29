@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { animated } from "react-spring";
 
-const Wrapper = styled(animated.div)`
+const Wrapper = styled.div`
   position: fixed;
   display: flex;
   align-items: center;

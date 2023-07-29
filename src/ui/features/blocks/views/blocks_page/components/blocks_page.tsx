@@ -23,7 +23,7 @@ export default function BlocksPage({blocks} : Props) {
   return (
     <Styled.Wrapper>
       {
-        blocks.map(block => {
+        blocks && blocks.map(block => {
           const Component = componentMap[block.__component]
           return <Component key={block.id} />
         })
