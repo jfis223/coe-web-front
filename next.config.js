@@ -23,24 +23,26 @@ const moduleExports = {
   reactStrictMode: true,
   async rewrites() {
     const DEFAULT_REWRITES = [
-          {
-            source: '/',
-            destination: '/home',
-          }
+      {
+        source: "/",
+        destination: "/home"
+      }
     ];
     return !(NODE_ENV === "production")
-      ? {beforeFiles: [
-          {
-            source: "/rest/:path*",
-            destination: `${NEXT_PUBLIC_REST_PROXY_ENDPOINT}/:path*`
-          },
-          ...DEFAULT_REWRITES
-        ]}
-      : {beforeFiles: [...DEFAULT_REWRITES]};
+      ? {
+          beforeFiles: [
+            {
+              source: "/rest/:path*",
+              destination: `${NEXT_PUBLIC_REST_PROXY_ENDPOINT}/:path*`
+            },
+            ...DEFAULT_REWRITES
+          ]
+        }
+      : { beforeFiles: [...DEFAULT_REWRITES] };
   },
   i18n,
   images: {
-    domains: [apiDomain]
+    domains: [apiDomain, "res.cloudinary.com"]
   },
   async headers() {
     return [
