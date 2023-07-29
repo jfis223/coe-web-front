@@ -25,6 +25,7 @@ export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMS
               }
               <Link href="/">
                   <Styled.MainLogo>
+                      Logo
                       <Logo />
                   </Styled.MainLogo>
               </Link>

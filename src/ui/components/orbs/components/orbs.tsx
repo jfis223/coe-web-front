@@ -1,34 +1,53 @@
-import * as PIXI from 'pixi.js';
 import { KawaseBlurFilter } from '@pixi/filter-kawase-blur';
 import {useEffect, useRef, useState} from "react";
 import {Orb} from "../view_models/orb";
 import {useSettingsProvider} from "@/src/ui/providers/settings.provider";
+import {Stage, Container, useApp} from "@pixi/react";
+import type {PixiRef} from "@pixi/react";
+import {useMemo} from "react";
+
+type IContainer = PixiRef<typeof Container>;
 
 export const Orbs = () => {
-    const canvasRef= useRef<HTMLCanvasElement | null>(null)
-    const [PixiApp, setPixiApp] = useState<PIXI.Application | null>(null);
+    return <Stage
+        options={{
+            backgroundAlpha: 0
+        }}
+    >
+        <PixiContainer />
+    </Stage>
+}
+
+const PixiContainer = () => {
+    const canvasRef= useRef<IContainer | null>(null);
+    const blurFilter = useMemo(() => [new KawaseBlurFilter(30, 10, true)], []);
+    const app = useApp();
+
     const [orbs, setOrbs] = useState<Orb[]>([]);
     const color1 = useSettingsProvider((state) => state.settings?.primaryColor);
     const color2 = useSettingsProvider((state) => state.settings?.secondaryColor);
     const color3 = useSettingsProvider((state) => state.settings?.tertiaryColor);
+    const handleResize = () => {
+        app.renderer?.resize(window.innerWidth, document.querySelector('main')?.offsetHeight || document.documentElement.scrollHeight);
+    };
+
+    useEffect(() => {
+        window.onresize = () => {
+            handleResize()
+         }
+        return () => {
+            window.onresize = null
+        }
+     }, [window])
 
     useEffect(() => {
         const colors = [color1?.replace("#", ""), color2?.replace("#", ""), color3?.replace("#", "")];
-
-        const app = new PIXI.Application({
-            view: canvasRef.current ?? undefined,
-            resizeTo: window,
-            backgroundAlpha: 0
-        });
-        app.stage.filters = [new KawaseBlurFilter(30, 10, true)];
-
-        setPixiApp(app)
 
         const orbsArray: Orb[] = [];
 
         for (let i = 0; i < 10; i++) {
             const orb = new Orb(colors[0] && `0x${colors[Math.floor(Math.random() * colors.length)]}`);
-            app.stage.addChild(orb.graphics);
+            canvasRef?.current?.addChild(orb.graphics);
 
             orbsArray.push(orb);
         }
@@ -36,8 +55,12 @@ export const Orbs = () => {
     }, [color1, color2, color3])
 
     useEffect(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, [])
+
+    useEffect(() => {
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            PixiApp?.ticker.add(() => {
+            app.ticker.add(() => {
                 // update and render each orb, each frame. app.ticker attempts to run at 60fps
                 orbs.forEach((orb) => {
                     orb.update();
@@ -51,9 +74,10 @@ export const Orbs = () => {
                 orb.render();
             });
         }
-    }, [orbs, PixiApp?.ticker])
+    }, [orbs])
 
-
-
-    return <canvas ref={canvasRef} />
+    return (
+        <Container ref={canvasRef} filters={blurFilter}/>
+    )
 }
+

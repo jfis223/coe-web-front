@@ -36,10 +36,12 @@ const DesktopLinks = styled.ul`
 `;
 
 const AnimatedIcon = styled.li`
+    font-size: 0;
     button {
       border: none;
       background-color: unset;
       padding: unset;
+      font-size: 0;
       ${includeMedia("sm", css`
         width: ${px2rem(24)};
         height: ${px2rem(27)};

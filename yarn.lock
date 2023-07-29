@@ -1405,6 +1405,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pixi/react@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "@pixi/react@npm:7.1.0"
+  dependencies:
+    lodash.isnil: 4.0.0
+    lodash.times: 4.3.2
+    performance-now: 2.1.0
+    prop-types: ^15.8.1
+  peerDependencies:
+    "@babel/runtime": ^7.14.8
+    "@pixi/app": ">=6.0.0"
+    "@pixi/constants": ">=6.0.0"
+    "@pixi/core": ">=6.0.0"
+    "@pixi/display": ">=6.0.0"
+    "@pixi/extensions": ">=6.0.0"
+    "@pixi/graphics": ">=6.0.0"
+    "@pixi/math": ">=6.0.0"
+    "@pixi/mesh": ">=6.0.0"
+    "@pixi/mesh-extras": ">=6.0.0"
+    "@pixi/particle-container": ">=6.0.0"
+    "@pixi/sprite": ">=6.0.0"
+    "@pixi/sprite-animated": ">=6.0.0"
+    "@pixi/sprite-tiling": ">=6.0.0"
+    "@pixi/text": ">=6.0.0"
+    "@pixi/text-bitmap": ">=6.0.0"
+    "@pixi/ticker": ">=6.0.0"
+    prop-types: ^15.8.1
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 4b9abb395de4950c90da682765056697729ef2acdc1a5b0bdc13ae9321fe7038846f07d0da5fa6185aba6b1b2ceb2f652a7bd0e88e24ba59ed547406c3cb24c0
+  languageName: node
+  linkType: hard
+
 "@pixi/runner@npm:7.2.4":
   version: 7.2.4
   resolution: "@pixi/runner@npm:7.2.4"
@@ -5283,6 +5316,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash.isnil@npm:4.0.0":
+  version: 4.0.0
+  resolution: "lodash.isnil@npm:4.0.0"
+  checksum: ebf8df69879badd6ad99c4f64c54c470248df5cf92b208ca730861b1d8ac058da7b632ac811d18b0929d93cbac8d8fc866e781ee816b0142c56952e85edc682f
+  languageName: node
+  linkType: hard
+
 "lodash.isplainobject@npm:^4.0.6":
   version: 4.0.6
   resolution: "lodash.isplainobject@npm:4.0.6"
@@ -5322,6 +5362,13 @@ __metadata:
   version: 4.4.0
   resolution: "lodash.startcase@npm:4.4.0"
   checksum: c03a4a784aca653845fe09d0ef67c902b6e49288dc45f542a4ab345a9c406a6dc194c774423fa313ee7b06283950301c1221dd2a1d8ecb2dac8dfbb9ed5606b5
+  languageName: node
+  linkType: hard
+
+"lodash.times@npm:4.3.2":
+  version: 4.3.2
+  resolution: "lodash.times@npm:4.3.2"
+  checksum: d26a9022e025d6061d356d3098fd80cdc062e7bf896bbbb56e643b2ae39156bf19b6167a4b046aa924b6d572a1e717853e552342ce34016fc5183308e329b575
   languageName: node
   linkType: hard
 
@@ -5691,6 +5738,7 @@ __metadata:
     "@front_web_mrmilu/utils": 2.0.0
     "@next/bundle-analyzer": 13.4.2
     "@pixi/filter-kawase-blur": ^5.1.1
+    "@pixi/react": ^7.1.0
     "@sentry/nextjs": 7.52.1
     "@types/lodash": 4.14.194
     "@types/node": 20.1.5
@@ -6283,6 +6331,13 @@ __metadata:
   version: 4.0.0
   resolution: "path-type@npm:4.0.0"
   checksum: 5b1e2daa247062061325b8fdbfd1fb56dde0a448fb1455453276ea18c60685bdad23a445dc148cf87bc216be1573357509b7d4060494a6fd768c7efad833ee45
+  languageName: node
+  linkType: hard
+
+"performance-now@npm:2.1.0":
+  version: 2.1.0
+  resolution: "performance-now@npm:2.1.0"
+  checksum: 534e641aa8f7cba160f0afec0599b6cecefbb516a2e837b512be0adbe6c1da5550e89c78059c7fabc5c9ffdf6627edabe23eb7c518c4500067a898fa65c2b550
   languageName: node
   linkType: hard
 

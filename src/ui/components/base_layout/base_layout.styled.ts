@@ -19,6 +19,7 @@ const Wrapper = styled.div`
     max-width: ${px2rem(breakpoints.ml + 'px')};
     margin: 0 auto;
     z-index: 1;
+    overflow-y: hidden;
   }
   canvas {
     position: absolute;
@@ -89,6 +90,7 @@ const MainHeaderCategories = styled.div`
 
 const MainLogo = styled.div`
   width: ${px2rem(180)};
+  font-size: 0;
   ${flexCenter};
   svg {
     width: ${px2rem(180)};

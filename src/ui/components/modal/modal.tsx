@@ -41,11 +41,12 @@ export const Modal = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modalShowing]);
 
-  return (
+      if (modalShowing) return (
         <Styled.Wrapper ref={modalRef}>
                 <div>{modalContent && cloneElement(modalContent as ReactElement, { ref: modalContentRef })}</div>
         </Styled.Wrapper>
-  );
+      )
+  return null
 };
 
 export const ModalContent = forwardRef<HTMLDivElement, PropsWithChildren<{ className?: string }>>(({ children, className }, ref) => {

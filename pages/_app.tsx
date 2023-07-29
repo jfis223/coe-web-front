@@ -47,6 +47,10 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   useEffect(() => {
     window.dispatchEvent(new Event('resize'));
+  }, [pageProps])
+
+  useEffect(() => {
+    window.dispatchEvent(new Event('resize'));
     getCMSSettingsController().catch(console.error);
   }, [])
 

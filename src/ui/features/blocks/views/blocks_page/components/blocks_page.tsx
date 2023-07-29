@@ -23,9 +23,9 @@ export default function BlocksPage({blocks} : Props) {
   return (
     <Styled.Wrapper>
       {
-        blocks && blocks.map(block => {
+        blocks && blocks.map((block, index) => {
           const Component = componentMap[block.__component]
-          return <Component key={block.id} />
+          return <Component key={index} />
         })
       }
     </Styled.Wrapper>

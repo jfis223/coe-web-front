@@ -26,6 +26,7 @@ export const NavBarDesktopLinks = ({ header} : PropsWithChildren<{ header: CMSMe
                 <Link
                     href={'/contacto'}
                 >
+                    Email
                     <Envelope />
                     <_Gradient />
                 </Link>
@@ -36,6 +37,7 @@ export const NavBarDesktopLinks = ({ header} : PropsWithChildren<{ header: CMSMe
                     message="Hello World!!!"
                     element={"button"}
                 >
+                    WhatsApp
                     <WhatsApp />
                 </ReactWhatsapp>
             </Styled.AnimatedIcon>
