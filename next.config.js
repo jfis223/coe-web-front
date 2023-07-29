@@ -46,7 +46,7 @@ const moduleExports = {
   },
   i18n,
   images: {
-    domains: [apiDomain, "cloudinary.com"]
+    domains: [apiDomain, "res.cloudinary.com"]
   },
   async headers() {
     return [
@@ -56,7 +56,7 @@ const moduleExports = {
           contentSecurityPolicy: {
             mergeDefaultDirectives: true,
             "default-src": "coe-web-cms.fly.dev",
-            "img-src": "cloudinary.com",
+            "img-src": "res.cloudinary.com",
             "style-src": "unsafe-inline",
             "script-src": "unsafe-inline"
           },

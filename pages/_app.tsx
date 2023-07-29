@@ -58,8 +58,13 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
     <>
       <Head>
         <title>Next boilerplate app</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
-        <meta httpEquiv="referrer" content="no-referrer, strict-origin-when-cross-origin" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        {process.env.NODE_ENV === "production" && (
+          <meta
+            httpEquiv="Content-Security-Policy"
+            content="default-src 'self' 'coe-web-cms.fly.dev'; child-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'res.cloudinary.com' object-src 'none'"
+          />
+        )}
       </Head>
       <GlobalStyles />
       <Modal />
