@@ -46,36 +46,29 @@ const moduleExports = {
   },
   async headers() {
     return [
-      // {
-      //   source: "/:path*",
-      //   headers: [
-      //     {
-      //       key: "X-XSS-Protection",
-      //       value: "1; mode=block"
-      //     },
-      //     {
-      //       key: "X-Frame-Options",
-      //       value: "SAMEORIGIN"
-      //     },
-      //     {
-      //       key: "X-Content-Type-Options",
-      //       value: "nosniff"
-      //     },
-      //     {
-      //       key: "Strict-Transport-Security",
-      //       value: "max-age=63072000; includeSubDomains; preload"
-      //     }
-      //   ]
-      // },
       {
         source: "/:path*",
         headers: [
-          { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "coe-web-cms.fly.dev" },
-          { key: "Access-Control-Allow-Methods", value: "GET,DELETE,PATCH,POST,PUT" },
           {
-            key: "Access-Control-Allow-Headers",
-            value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
+            key: "X-XSS-Protection",
+            value: "1; mode=block"
+          },
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN"
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff"
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload"
+          },
+          {
+            key: "Content-Security-Policy",
+            value:
+              "default-src 'self' https://coe-web-cms.fly.dev; img-src 'self' res.cloudinary.com https://res.cloudinary.com data:; script-src 'self' 'unsafe-eval' 'unsafe-inline'"
           }
         ]
       }
