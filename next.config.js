@@ -67,8 +67,7 @@ const moduleExports = {
           },
           {
             key: "Content-Security-Policy",
-            value:
-              "default-src 'self' https://coe-web-cms.fly.dev; img-src 'self' res.cloudinary.com https://res.cloudinary.com data:; script-src 'self' 'unsafe-eval' 'unsafe-inline'"
+            value: "default-src 'self' https://coe-web-cms.fly.dev; img-src 'self' res.cloudinary.com https://res.cloudinary.com data:;"
           }
         ]
       }
