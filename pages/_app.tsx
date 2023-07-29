@@ -62,7 +62,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         {process.env.NODE_ENV === "production" && (
           <meta
             httpEquiv="Content-Security-Policy"
-            content="default-src 'self' coe-web-cms.fly.dev; child-src 'none'; style-src 'unsafe-inline'; object-src 'none'; img-src res.cloudinary.com 'self'; script-src 'unsafe-inline' 'self';"
+            content="default-src 'self' coe-web-cms.fly.dev; child-src 'none'; style-src 'unsafe-inline'; object-src 'none'; img-src res.cloudinary.com 'self';"
           />
         )}
         <meta httpEquiv="referrer" content="no-referrer, strict-origin-when-cross-origin" />
