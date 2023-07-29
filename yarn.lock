@@ -5861,6 +5861,7 @@ __metadata:
     next: 13.4.2
     next-cloudinary: ^4.16.3
     next-i18next: 13.2.2
+    next-safe: ^3.4.1
     pixi.js: ^7.2.4
     prettier: 2.8.8
     query-string: 8.1.0
@@ -5973,6 +5974,15 @@ __metadata:
     react: ">= 17.0.2"
     react-i18next: ^12.2.0
   checksum: 2adfc9facea57a5e733557d06377a85b991aa23dbc80f7af4856cfba224eac6714a46a970022a519dbda266371193f9251b12f29175a46d2b97cfcee21d5b1d4
+  languageName: node
+  linkType: hard
+
+"next-safe@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "next-safe@npm:3.4.1"
+  peerDependencies:
+    next: ^9.5.0 || ^10.2.1 || ^11.1.0 || ^12.1.0 || ^13.0.0
+  checksum: 33565314d29bef61545058789b4f1ce69e5f39c084ba9c7f6824e35a542ce846cf5ad2f62e430f2bea9a2dee0e044c3eea53e8ccfe8662c7c8516f87ab5a9121
   languageName: node
   linkType: hard
 

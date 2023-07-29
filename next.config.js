@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import("next").NextConfig} */
+const nextSafe = require("next-safe");
 const { i18n } = require("./next-i18next.config");
 const { withSentryConfig } = require("@sentry/nextjs");
 
@@ -15,7 +16,9 @@ const {
   NEXT_PUBLIC_STRAPI_URL
 } = process.env;
 
-const apiDomain = NODE_ENV !== "production" ? "next_base.dev.mrmilu.com" : NEXT_PUBLIC_API_URL?.replace("https://", "");
+const isDev = NODE_ENV !== "production";
+
+const apiDomain = NODE_ENV !== "production" ? "coe-web-cms.fly.dev" : NEXT_PUBLIC_API_URL?.replace("https://", "");
 
 const moduleExports = {
   eslint: {
@@ -49,16 +52,13 @@ const moduleExports = {
     return [
       {
         source: "/:path*",
-        headers: [
-          { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "https://res.cloudinary.com" },
-          { key: "Access-Control-Allow-Origin", value: `${NEXT_PUBLIC_STRAPI_URL}` },
-          { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
-          {
-            key: "Access-Control-Allow-Headers",
-            value: "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
-          }
-        ]
+        headers: nextSafe({
+          contentSecurityPolicy: {
+            "default-src": "'self' 'coe-web-cms.fly.dev'",
+            "img-src": "'self' 'res.cloudinary.com'"
+          },
+          isDev
+        })
       }
     ];
   },
