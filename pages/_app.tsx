@@ -65,6 +65,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
             content="default-src 'self' 'coe-web-cms.fly.dev'; child-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src 'res.cloudinary.com' object-src 'none'"
           />
         )}
+        <meta httpEquiv="referrer" content="no-referrer, strict-origin-when-cross-origin" />
       </Head>
       <GlobalStyles />
       <Modal />
