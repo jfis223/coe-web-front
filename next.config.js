@@ -11,7 +11,8 @@ const {
   SENTRY_ORG,
   SENTRY_PROJECT,
   SENTRY_AUTH_TOKEN,
-  SENTRY_URL
+  SENTRY_URL,
+  NEXT_PUBLIC_STRAPI_URL
 } = process.env;
 
 const apiDomain = NODE_ENV !== "production" ? "next_base.dev.mrmilu.com" : NEXT_PUBLIC_API_URL?.replace("https://", "");
@@ -50,7 +51,8 @@ const moduleExports = {
         source: "/:path*",
         headers: [
           { key: "Access-Control-Allow-Credentials", value: "true" },
-          { key: "Access-Control-Allow-Origin", value: "*" },
+          { key: "Access-Control-Allow-Origin", value: "https://res.cloudinary.com" },
+          { key: "Access-Control-Allow-Origin", value: `${NEXT_PUBLIC_STRAPI_URL}` },
           { key: "Access-Control-Allow-Methods", value: "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
           {
             key: "Access-Control-Allow-Headers",
