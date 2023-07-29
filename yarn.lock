@@ -1578,6 +1578,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pixi/unsafe-eval@npm:^7.2.4":
+  version: 7.2.4
+  resolution: "@pixi/unsafe-eval@npm:7.2.4"
+  peerDependencies:
+    "@pixi/core": 7.2.4
+  checksum: a98e617b6e81a58c796d078136f183e73a56fc0e6956c8a071309e505d68a66f4fc71ef87313f5d8589769d1039d11e468a579928a934daf42cbe73bfd7e1e46
+  languageName: node
+  linkType: hard
+
 "@pixi/utils@npm:7.2.4":
   version: 7.2.4
   resolution: "@pixi/utils@npm:7.2.4"
@@ -5823,6 +5832,7 @@ __metadata:
     "@next/bundle-analyzer": 13.4.2
     "@pixi/filter-kawase-blur": ^5.1.1
     "@pixi/react": ^7.1.0
+    "@pixi/unsafe-eval": ^7.2.4
     "@sentry/nextjs": 7.52.1
     "@types/lodash": 4.14.194
     "@types/node": 20.1.5

@@ -19,6 +19,7 @@
     "@front_web_mrmilu/utils": "2.0.0",
     "@pixi/filter-kawase-blur": "^5.1.1",
     "@pixi/react": "^7.1.0",
+    "@pixi/unsafe-eval": "^7.2.4",
     "@sentry/nextjs": "7.52.1",
     "@types/react-transition-group": "^4.4.6",
     "axios": "1.4.0",
