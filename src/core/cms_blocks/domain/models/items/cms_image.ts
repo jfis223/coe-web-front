@@ -37,7 +37,7 @@ export class CMSImage {
 export class CMSImageItem {
     id: number;
     altText: string;
-    image: CMSImage;
+    image: CMSSingleImageEntity;
 
     constructor(input: ConstructorType<CMSImageItem>) {
         this.id = input.id;
@@ -49,6 +49,13 @@ export class CMSImageItem {
 export class CMSImageEntity {
     data: CMSImage[];
     constructor(input: ConstructorType<CMSImageEntity>) {
+        this.data = input.data;
+    }
+}
+
+export class CMSSingleImageEntity {
+    data: CMSImage;
+    constructor(input: ConstructorType<CMSSingleImageEntity>) {
         this.data = input.data;
     }
 }

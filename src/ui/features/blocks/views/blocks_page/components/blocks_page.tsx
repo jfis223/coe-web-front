@@ -4,12 +4,13 @@ import Styled from "@/src/ui/features/blocks/views/blocks_page/components/blocks
 import { AppErrorBoundary } from "@/src/ui/components/app_error_boundary/app_error_boundary";
 import type {BlocksTypeOptions} from "@/src/ui/features/blocks/views/blocks_page/view_models/blocks_type_options";
 import type {CMSBlock} from "@/src/core/cms_blocks/domain/models/cms_block";
+import {SliderBlock} from "@/src/ui/features/blocks/views/slider_block/components/slider_block";
 
 const componentMap: Record<BlocksTypeOptions, () => JSX.Element> = {
   "blocks.accordion": () => <h1>blocks.accordion</h1>,
   "blocks.gallery": () => <h1>blocks.gallery</h1>,
   "blocks.icon-text-list": () => <h1>blocks.icon-text-list</h1>,
-  "blocks.slider": () => <h1>blocks.slider</h1>,
+  "blocks.slider": SliderBlock,
   "blocks.team": () => <h1>blocks.team</h1>,
   "blocks.text": () => <h1>blocks.text</h1>,
   "blocks.video": () => <h1>blocks.video</h1>,
@@ -25,7 +26,7 @@ export default function BlocksPage({blocks} : Props) {
       {
         blocks && blocks.map((block, index) => {
           const Component = componentMap[block.__component]
-          return <Component key={index} />
+          return <Component key={index} {...block} />
         })
       }
     </Styled.Wrapper>

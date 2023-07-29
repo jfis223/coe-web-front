@@ -549,6 +549,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@cloudinary-util/url-loader@npm:^3.10.0":
+  version: 3.10.0
+  resolution: "@cloudinary-util/url-loader@npm:3.10.0"
+  dependencies:
+    "@cloudinary-util/util": 2.2.1
+    "@cloudinary/url-gen": ^1.10.2
+  checksum: 313cec0fad54387e4975e21909f499703dd18c04ff25e7329a14c0b8b1cd0c0a55246dfd8124d3034df83575b7f6288f44de71bf1e87d5356a275c2f4cdb0ba9
+  languageName: node
+  linkType: hard
+
+"@cloudinary-util/util@npm:2.2.1, @cloudinary-util/util@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "@cloudinary-util/util@npm:2.2.1"
+  checksum: a3dbf091b4a8c8090a6178ce140872d21902345c61372079d7af4436e9d894d727ea85520bd3306ad231446edd35ba1781a0dac17da16348a5b27f5af2060056
+  languageName: node
+  linkType: hard
+
+"@cloudinary/transformation-builder-sdk@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@cloudinary/transformation-builder-sdk@npm:1.4.0"
+  dependencies:
+    "@cloudinary/url-gen": ^1.7.0
+  checksum: dd6827ca4a3c080e73991ebdd5261f2c44dd2abd166ec6ecee9fd5490b12825acf004eda2a1da34cb9c440b566331c4ef81109691fb232e131129796260761f0
+  languageName: node
+  linkType: hard
+
+"@cloudinary/url-gen@npm:^1.10.2, @cloudinary/url-gen@npm:^1.7.0":
+  version: 1.11.0
+  resolution: "@cloudinary/url-gen@npm:1.11.0"
+  dependencies:
+    "@cloudinary/transformation-builder-sdk": ^1.4.0
+  checksum: 651b2af8d168470398e139e311232e67def1a741f1812a70afab44c8967699e26d8bf99730ee361abcee2186c5373328f15b08988ccb39705bca58be336d9ed7
+  languageName: node
+  linkType: hard
+
 "@commitlint/cli@npm:17.6.3":
   version: 17.6.3
   resolution: "@commitlint/cli@npm:17.6.3"
@@ -3368,6 +3403,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-react@npm:^8.0.0-rc11":
+  version: 8.0.0-rc11
+  resolution: "embla-carousel-react@npm:8.0.0-rc11"
+  dependencies:
+    embla-carousel: 8.0.0-rc11
+    embla-carousel-reactive-utils: 8.0.0-rc11
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.1 || ^18.0.0
+  checksum: 10399bf17735ef98d8e3eb289ef0e80a6d6c15b2e0800223c6047681e1563f4955ea299ce51c3b02c052bebc4d0b50294e31f32e6459a97ed9dd5eb5f4283dee
+  languageName: node
+  linkType: hard
+
+"embla-carousel-reactive-utils@npm:8.0.0-rc11":
+  version: 8.0.0-rc11
+  resolution: "embla-carousel-reactive-utils@npm:8.0.0-rc11"
+  peerDependencies:
+    embla-carousel: 8.0.0-rc11
+  checksum: fcbe1922a702d3ada809e0b1637181fe90c7914aab5b099db027cc7b84fa666be8325db4cf77f9d9a348838176f4652a1d9ee94484151ba8a9072ba961e13c11
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:8.0.0-rc11":
+  version: 8.0.0-rc11
+  resolution: "embla-carousel@npm:8.0.0-rc11"
+  checksum: 8b09e2ec09b4510157f1cdfeb471427f07deb4f9eb6c1d1f953264bc93cfda6bfe166710e3016e3b19a774044472d177a23edc803fe694641d3184a19be7f63f
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^8.0.0":
   version: 8.0.0
   resolution: "emoji-regex@npm:8.0.0"
@@ -5752,6 +5815,7 @@ __metadata:
     babel-plugin-styled-components: 2.1.1
     babel-plugin-transform-typescript-metadata: 0.3.2
     class-transformer: 0.5.1
+    embla-carousel-react: ^8.0.0-rc11
     eslint: 8.40.0
     eslint-config-next: 13.4.2
     eslint-config-prettier: 8.8.0
@@ -5764,6 +5828,7 @@ __metadata:
     lint-staged: 13.2.2
     lodash: 4.17.21
     next: 13.4.2
+    next-cloudinary: ^4.16.3
     next-i18next: 13.2.2
     pixi.js: ^7.2.4
     prettier: 2.8.8
@@ -5844,6 +5909,19 @@ __metadata:
   version: 0.6.3
   resolution: "negotiator@npm:0.6.3"
   checksum: b8ffeb1e262eff7968fc90a2b6767b04cfd9842582a9d0ece0af7049537266e7b2506dfb1d107a32f06dd849ab2aea834d5830f7f4d0e5cb7d36e1ae55d021d9
+  languageName: node
+  linkType: hard
+
+"next-cloudinary@npm:^4.16.3":
+  version: 4.16.3
+  resolution: "next-cloudinary@npm:4.16.3"
+  dependencies:
+    "@cloudinary-util/url-loader": ^3.10.0
+    "@cloudinary-util/util": ^2.2.1
+  peerDependencies:
+    next: ^12 || ^13
+    react: ^17 || ^18
+  checksum: c409af044af72de54cc4b65bbee18412fa4964724ea69f2a63403af4611e29bdb832ae27d57730a80e761ddffe2bb29b6e8d63bed62b2907518bb65f8673f18a
   languageName: node
   linkType: hard
 
