@@ -6,11 +6,15 @@ import React from "react";
 import type { PropsWithChildren } from "react";
 import type { CMSMenu } from "@/src/core/cms_menus/domain/models/cms_menu";
 import { useIsMobileProvider } from "@/src/ui/providers/is_mobile.provider";
+import { useSettingsProvider } from "@/src/ui/providers/settings.provider";
+import { useTranslation } from "next-i18next";
 
 export const NavBarDesktopLinks = ({ header }: PropsWithChildren<{ header: CMSMenu }>) => {
   const isMobile = useIsMobileProvider((state) => state.isMobile);
   const showMobileMenu = useIsMobileProvider((state) => state.showMobileMenu);
   const setShowMobileMenu = useIsMobileProvider((state) => state.setShowMobileMenu);
+  const settings = useSettingsProvider((state) => state.settings);
+  const { t } = useTranslation();
   return (
     <Styled.DesktopLinks>
       {!isMobile &&
@@ -23,13 +27,13 @@ export const NavBarDesktopLinks = ({ header }: PropsWithChildren<{ header: CMSMe
         ))}
       <Styled.AnimatedIcon>
         <Link href={"/contacto"} onClick={() => isMobile && showMobileMenu && setShowMobileMenu()}>
-          Email
+          {t("email")}
           <Envelope />
           <_Gradient />
         </Link>
       </Styled.AnimatedIcon>
       <Styled.AnimatedIcon>
-        <ReactWhatsapp number="1-212-736-5000" message="Hello World!!!" element={"button"}>
+        <ReactWhatsapp number={settings?.whatsappNumber.replace(" ", "") ?? ""} message={t("whatsAppMessage")} element={"button"}>
           WhatsApp
           <WhatsApp />
         </ReactWhatsapp>

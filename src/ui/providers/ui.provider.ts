@@ -37,6 +37,16 @@ export const uiProvider = createStore<UiStateViewModel>()(
           state.modal.content = null;
         });
       }, 150);
+    },
+    pageHasH1: false,
+    checkIfH1OnPage() {
+      set((state) => {
+        if (document.querySelector("h1")) {
+          state.pageHasH1 = true;
+        } else {
+          state.pageHasH1 = false;
+        }
+      });
     }
   }))
 );

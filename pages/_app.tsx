@@ -9,7 +9,7 @@ import { GlobalStyles } from "@/src/ui/styles/globals";
 import { Modal } from "@/src/ui/components/modal/modal";
 import Head from "next/head";
 import "@/src/common/utils/yup_extensions";
-import { uiProvider } from "@/src/ui/providers/ui.provider";
+import { uiProvider, useUiProvider } from "@/src/ui/providers/ui.provider";
 import { useIsMobileProvider } from "@/src/ui/providers/is_mobile.provider";
 import { appWithTranslation } from "next-i18next";
 import { useEffect } from "react";
@@ -37,6 +37,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page);
   const setIsMobile = useIsMobileProvider((state) => state.setIsMobile);
+  const checkIfH1OnPage = useUiProvider((state) => state.checkIfH1OnPage);
 
   useEffect(() => {
     window.addEventListener("resize", () => setIsMobile(window.innerWidth));
@@ -47,6 +48,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   useEffect(() => {
     window.dispatchEvent(new Event("resize"));
+    checkIfH1OnPage();
   }, [pageProps]);
 
   useEffect(() => {

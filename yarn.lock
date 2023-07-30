@@ -3419,6 +3419,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"embla-carousel-autoplay@npm:^8.0.0-rc11":
+  version: 8.0.0-rc11
+  resolution: "embla-carousel-autoplay@npm:8.0.0-rc11"
+  peerDependencies:
+    embla-carousel: 8.0.0-rc11
+  checksum: 7ac55dbff15f1562f972cbdf5d8e066f2c2762a5aaf58583f6d13bf17ca0b192f6b96688d42a652b104c7920023723475efa751ab0099a674b51fb38c450652c
+  languageName: node
+  linkType: hard
+
 "embla-carousel-react@npm:^8.0.0-rc11":
   version: 8.0.0-rc11
   resolution: "embla-carousel-react@npm:8.0.0-rc11"
@@ -5846,6 +5855,7 @@ __metadata:
     babel-plugin-styled-components: 2.1.1
     babel-plugin-transform-typescript-metadata: 0.3.2
     class-transformer: 0.5.1
+    embla-carousel-autoplay: ^8.0.0-rc11
     embla-carousel-react: ^8.0.0-rc11
     eslint: 8.40.0
     eslint-config-next: 13.4.2

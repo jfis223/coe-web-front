@@ -11,4 +11,6 @@ export interface UiStateViewModel {
   hideModal(): void;
   showModal(modalContent: ReactNode): void;
   setLoader(value: boolean): void;
+  pageHasH1: boolean;
+  checkIfH1OnPage(): void;
 }

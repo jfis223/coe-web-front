@@ -24,6 +24,7 @@
     "@types/react-transition-group": "^4.4.6",
     "axios": "1.4.0",
     "class-transformer": "0.5.1",
+    "embla-carousel-autoplay": "^8.0.0-rc11",
     "embla-carousel-react": "^8.0.0-rc11",
     "formik": "2.2.9",
     "i18next": "^23.2.6",
