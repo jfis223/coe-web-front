@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import("next").NextConfig} */
-const nextSafe = require("next-safe");
 const { i18n } = require("./next-i18next.config");
 const { withSentryConfig } = require("@sentry/nextjs");
 
@@ -52,16 +51,24 @@ const moduleExports = {
     return [
       {
         source: "/:path*",
-        headers: nextSafe({
-          contentSecurityPolicy: {
-            mergeDefaultDirectives: true,
-            "default-src": "coe-web-cms.fly.dev",
-            "img-src": "res.cloudinary.com",
-            "style-src": "unsafe-inline",
-            "script-src": "unsafe-inline"
+        headers: [
+          {
+            key: "X-XSS-Protection",
+            value: "1; mode=block"
           },
-          isDev
-        })
+          {
+            key: "X-Frame-Options",
+            value: "SAMEORIGIN"
+          },
+          {
+            key: "X-Content-Type-Options",
+            value: "nosniff"
+          },
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=63072000; includeSubDomains; preload"
+          }
+        ]
       }
     ];
   },
