@@ -1,7 +1,6 @@
 import * as PIXI from "pixi.js";
 import { debounce } from "lodash";
 import { createNoise2D } from "simplex-noise";
-import "@pixi/unsafe-eval";
 
 // return a random number within a range
 export const random = (min: number, max: number) => {
