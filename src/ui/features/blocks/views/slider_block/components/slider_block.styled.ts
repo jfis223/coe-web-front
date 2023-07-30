@@ -1,9 +1,9 @@
-import styled, {css} from "styled-components";
+import styled, { css } from "styled-components";
 import { px2rem, flexCenter, absoluteCenter } from "@/src/ui/styles/utils";
-import {spacing} from "@/src/ui/styles/spacing";
+import { spacing } from "@/src/ui/styles/spacing";
 import { colors } from "@/src/ui/styles/colors";
-import {includeMedia} from "@/src/ui/styles/breakpoints";
-import {typography} from "@/src/ui/styles/typography";
+import { includeMedia } from "@/src/ui/styles/breakpoints";
+import { typography } from "@/src/ui/styles/typography";
 
 const Wrapper = styled.section`
   max-width: 100vw;
@@ -14,18 +14,18 @@ const Wrapper = styled.section`
   overflow: hidden;
   background-color: ${colors.white};
   ${includeMedia(
-      "ml",
-      css`
-        width: 100%;
-        margin: ${px2rem(spacing.size5)} auto;
-      `
+    "ml",
+    css`
+      width: 100%;
+      margin: ${px2rem(spacing.size5)} auto;
+    `
   )};
   ${flexCenter}
-  .embla__slide{
+  .embla__slide {
     position: relative;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   }
-  .embla__slide img{
+  .embla__slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -37,14 +37,14 @@ const Wrapper = styled.section`
 const GradientOverlay = styled.div`
   width: 100%;
   height: 100%;
-  background: rgba(2,0,36, 0.5);
+  background: rgba(2, 0, 36, 0.5);
   ${absoluteCenter}
   ${includeMedia(
-          "sm",
-          css`
-       background: rgb(2,0,36);
-       background: linear-gradient(0deg, rgba(2,0,36,0.7) 0%, rgba(34,85,137,0.19509810760241597) 80%);
-      `
+    "sm",
+    css`
+      background: rgb(2, 0, 36);
+      background: linear-gradient(0deg, rgba(2, 0, 36, 0.7) 0%, rgba(34, 85, 137, 0.19509810760241597) 80%);
+    `
   )};
 `;
 
@@ -56,10 +56,10 @@ const TextWrapper = styled.div`
   width: 100%;
   ${absoluteCenter}
   ${includeMedia(
-          "sm",
-          css`
-        width: auto;
-      `
+    "sm",
+    css`
+      width: auto;
+    `
   )};
 `;
 
@@ -68,18 +68,22 @@ const Title = styled.h2`
   text-align: center;
   color: ${colors.white};
   margin-bottom: ${px2rem(spacing.size1)};
+  font-weight: 600;
   ${includeMedia(
+    "sm",
+    css`
+      ${typography.headingS}
+      font-weight: 600;
+    `
+  )};
+  p {
+    ${typography.headingS}
+    font-weight: 600;
+    ${includeMedia(
       "sm",
       css`
-        ${typography.headingM}
-      `
-  )};
-   p{
-    ${typography.headingS}
-    ${includeMedia(
-            "sm",
-            css`
-        ${typography.headingM}
+        ${typography.headingS}
+        font-weight: 600;
       `
     )};
   }
@@ -90,22 +94,22 @@ const Subtitle = styled.h3`
   text-align: center;
   color: ${colors.white};
   ${includeMedia(
-          "sm",
-          css`
-        ${typography.bodyL}
-      `
+    "sm",
+    css`
+      ${typography.bodyL}
+    `
   )};
-  p{
+  p {
     ${typography.bodyS}
     ${includeMedia(
-            "sm",
-            css`
+      "sm",
+      css`
         ${typography.bodyL}
       `
     )};
   }
 `;
 
-const SliderBlockStyled = {Wrapper, TextWrapper, Title, Subtitle, GradientOverlay};
+const SliderBlockStyled = { Wrapper, TextWrapper, Title, Subtitle, GradientOverlay };
 
 export default SliderBlockStyled;
