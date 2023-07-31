@@ -57,6 +57,10 @@ const Body = styled.div`
     align-self: center;
     margin-bottom: ${px2rem(spacing.size8)};
     position: relative;
+    transition: opacity 0.5s ease;
+    &:hover {
+      opacity: 0.6;
+    }
     &:after {
       content: "”";
       position: absolute;

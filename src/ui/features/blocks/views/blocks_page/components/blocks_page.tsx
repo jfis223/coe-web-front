@@ -7,6 +7,7 @@ import { SliderBlock } from "@/src/ui/features/blocks/views/slider_block/compone
 import { IconTextListBlock } from "@/src/ui/features/blocks/views/icon_text_list_block/components/icon_text_list_block";
 import { TextBlock } from "@/src/ui/features/blocks/views/text_block/components/text_block";
 import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/component/video_block";
+import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_block";
 import { ErrorBoundary } from "react-error-boundary";
 
 const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
@@ -14,7 +15,7 @@ const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
   "blocks.gallery": () => <span>blocks.gallery</span>,
   "blocks.icon-text-list": IconTextListBlock,
   "blocks.slider": SliderBlock,
-  "blocks.team": () => <span>blocks.team</span>,
+  "blocks.team": TeamsBlock,
   "blocks.text": TextBlock,
   "blocks.video": VideoBlock
 };
