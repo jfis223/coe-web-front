@@ -18,6 +18,7 @@ const AccordionHead = styled.button<Props>`
   background-color: rgba(243, 244, 246, 0.7);
   width: 100%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: black;
   padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size3)};
   display: flex;
   justify-content: space-between;
@@ -69,12 +70,18 @@ const AccordionBody = styled.div<TransitionProps>`
           padding: ${px2rem(spacing.size8)} ${px2rem(spacing.size8)};
           border: 1px solid ${colors.doveGray};
           opacity: 1;
+          p {
+            ${typography.bodyM}
+          }
         `
       : css`
           height: 0;
           padding: 0;
           border: unset;
           opacity: 0;
+          p {
+            font-size: 0;
+          }
         `};
   img {
     border: 1px solid ${colors.main};
