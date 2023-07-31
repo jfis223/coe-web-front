@@ -93,7 +93,7 @@ const AccordionBody = styled.div<TransitionProps>`
     ${includeMedia(
       "ml",
       css`
-        max-width: unset;
+        max-width: ${px2rem(500)};
         width: unset;
       `
     )};
