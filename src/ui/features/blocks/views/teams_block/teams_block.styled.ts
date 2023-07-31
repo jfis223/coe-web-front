@@ -79,7 +79,8 @@ const MainTitle = styled.h3`
   position: relative;
   text-align: center;
   padding-bottom: ${px2rem(spacing.size8)};
-  ${typography.bodyXL}
+  ${typography.headingS}
+  font-weight: 600;
 `;
 
 const TeamsBlockStyled = { Wrapper, Card, Caption, Title, Subtitle, GlassBackground, MainTitle };

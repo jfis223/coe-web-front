@@ -5,7 +5,7 @@ export const colors: Record<colorsType, string> = {
   black: "#000000",
   codGray: "#1A1A1A",
   scarpaFlow: "#5D5D5E",
-  doveGray: "#737373",
+  doveGray: "#bcbcbc",
 
   // colors
   main: "#225589",

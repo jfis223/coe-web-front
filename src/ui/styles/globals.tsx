@@ -15,7 +15,8 @@ const Styles = createGlobalStyle`
     ${fonts.Switzer};
 
     &:focus {
-      outline: ${px2rem(2)} solid ${colors.codGray};
+      outline: ${px2rem(2)} solid ${colors.main};
+      outline-offset: ${px2rem(-2)};
     }
   }
 

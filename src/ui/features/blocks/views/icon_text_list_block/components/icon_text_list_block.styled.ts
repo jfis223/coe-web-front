@@ -24,7 +24,7 @@ const Wrapper = styled.section`
 `;
 
 const Card = styled.div`
-  width: calc(50% - ${px2rem(spacing.size2)});
+  width: 100%;
   border: 1px solid white;
   position: relative;
   z-index: 2;
@@ -35,6 +35,14 @@ const Card = styled.div`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   ${flexCenter};
   justify-content: flex-start;
+  ${includeMedia(
+    "sm",
+    css`
+      justify-content: center;
+      width: calc(50% - ${px2rem(spacing.size2)});
+      padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size8)};
+    `
+  )};
   ${includeMedia(
     "ml",
     css`

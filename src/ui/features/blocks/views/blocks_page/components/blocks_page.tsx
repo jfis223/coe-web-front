@@ -8,10 +8,11 @@ import { IconTextListBlock } from "@/src/ui/features/blocks/views/icon_text_list
 import { TextBlock } from "@/src/ui/features/blocks/views/text_block/components/text_block";
 import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/component/video_block";
 import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_block";
+import { AccordionBlock } from "@/src/ui/features/blocks/views/accordion_block/components/accordion_block";
 import { ErrorBoundary } from "react-error-boundary";
 
 const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
-  "blocks.accordion": () => <span>blocks.accordion</span>,
+  "blocks.accordion": AccordionBlock,
   "blocks.gallery": () => <span>blocks.gallery</span>,
   "blocks.icon-text-list": IconTextListBlock,
   "blocks.slider": SliderBlock,
