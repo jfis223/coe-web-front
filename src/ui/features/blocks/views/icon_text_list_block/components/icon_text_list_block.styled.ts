@@ -30,20 +30,25 @@ const Card = styled.div`
   z-index: 2;
   border-radius: ${px2rem(spacing.size2)};
   overflow: hidden;
-  padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size8)};
+  padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size3)};
   flex-direction: column;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  ${flexCenter}
+  ${flexCenter};
+  justify-content: flex-start;
   ${includeMedia(
     "ml",
     css`
+      justify-content: center;
       width: calc(25% - ${px2rem(spacing.size2)});
+      padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size8)};
     `
   )};
   img {
     padding: ${px2rem(spacing.size2)};
     margin-bottom: ${px2rem(spacing.size5)};
     object-fit: contain;
+    width: ${px2rem(100)};
+    height: ${px2rem(100)};
   }
   p {
     text-align: center;

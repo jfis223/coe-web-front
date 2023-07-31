@@ -4,8 +4,10 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { CldImage } from "next-cloudinary";
 import Styled from "./slider_block.styled";
+import { useUiProvider } from "@/src/ui/providers/ui.provider";
 
 export const SliderBlock = ({ slides }: CMSSlider) => {
+  const pageHasH1 = useUiProvider((state) => state.pageHasH1);
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
   return (
     <Styled.Wrapper>
@@ -15,8 +17,22 @@ export const SliderBlock = ({ slides }: CMSSlider) => {
             return (
               <div className="embla__slide" key={index}>
                 <Styled.TextWrapper>
-                  <Styled.Title dangerouslySetInnerHTML={{ __html: slide.title }} />
-                  <Styled.Subtitle dangerouslySetInnerHTML={{ __html: slide.subtitle ?? "" }} />
+                  {!pageHasH1 && slide.title && index === 0 && (
+                    <h1>
+                      <Styled.Title dangerouslySetInnerHTML={{ __html: slide.title.replace(/(<p>|<\/p>)/g, "") }} />
+                    </h1>
+                  )}
+                  {!pageHasH1 && slide.title && index !== 0 && (
+                    <h2>
+                      <Styled.Title dangerouslySetInnerHTML={{ __html: slide.title.replace(/(<p>|<\/p>)/g, "") }} />
+                    </h2>
+                  )}
+                  {pageHasH1 && slide.title && (
+                    <h2>
+                      <Styled.Title dangerouslySetInnerHTML={{ __html: slide.title.replace(/(<p>|<\/p>)/g, "") }} />
+                    </h2>
+                  )}
+                  {slide.subtitle && <Styled.Subtitle dangerouslySetInnerHTML={{ __html: slide.subtitle.replace(/(<p>|<\/p>)/g, "") }} />}
                 </Styled.TextWrapper>
                 <Styled.GradientOverlay />
                 {Boolean(slide.image) && (

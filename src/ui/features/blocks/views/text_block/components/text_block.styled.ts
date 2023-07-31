@@ -43,7 +43,7 @@ const Body = styled.div`
   }
   p {
     text-align: justify;
-    padding-bottom: ${px2rem(spacing.size2)};
+    padding-bottom: ${px2rem(spacing.size6)};
     ${typography.bodyM}
   }
   blockquote {
@@ -51,11 +51,11 @@ const Body = styled.div`
     opacity: 0.7;
     border-radius: ${px2rem(spacing.size2)};
     border: 1px solid white;
-    padding: ${px2rem(spacing.size4)};
-    margin: ${px2rem(spacing.size4)} 0;
+    padding: ${px2rem(spacing.size10)} ${px2rem(spacing.size8)};
+    margin: ${px2rem(spacing.size8)} 0;
     width: 100%;
     align-self: center;
-    margin-bottom: ${px2rem(spacing.size4)};
+    margin-bottom: ${px2rem(spacing.size8)};
     position: relative;
     &:after {
       content: "”";
@@ -76,6 +76,7 @@ const Body = styled.div`
     > p {
       ${typography.bodyL}
       text-align: center;
+      padding-bottom: 0;
     }
   }
 `;

@@ -12,6 +12,10 @@ const Wrapper = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   gap: ${px2rem(spacing.size2)};
+  border: 1px solid ${colors.main};
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: ${px2rem(spacing.size5)};
+  aspect-ratio: 16 / 9;
   ${includeMedia(
     "ml",
     css`
@@ -20,9 +24,6 @@ const Wrapper = styled.section`
     `
   )};
   iframe {
-    border: 1px solid ${colors.main};
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: ${px2rem(spacing.size5)};
     aspect-ratio: 16 / 9;
   }
 `;

@@ -63,12 +63,13 @@ const TextWrapper = styled.div`
   )};
 `;
 
-const Title = styled.h2`
+const Title = styled.span`
   ${typography.headingS}
   text-align: center;
   color: ${colors.white};
-  margin-bottom: ${px2rem(spacing.size1)};
   font-weight: 600;
+  margin: ${px2rem(spacing.size1)} auto;
+  display: table;
   ${includeMedia(
     "sm",
     css`
@@ -76,9 +77,11 @@ const Title = styled.h2`
       font-weight: 600;
     `
   )};
-  p {
+  h1,
+  h2 {
     ${typography.headingS}
     font-weight: 600;
+    text-align: center;
     ${includeMedia(
       "sm",
       css`
