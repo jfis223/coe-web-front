@@ -2,5 +2,8 @@
   "whatsAppMessage": "I would like to book an appointment in the Centro Oftalmológico del Este",
   "email": "Contact",
   "team": "Our team",
-  "uniqueInUruguay": "Unique in Uruguay"
+  "uniqueInUruguay": "Unique in Uruguay",
+  "copyright": "© Copyright {{year}} Centro Oftalmológico del Este - All rights reserved.",
+  "whatsAppTitle": "Book an appointment through WhatsApp",
+  "whatsAppTime": "Online from {{from}} until {{to}}"
 }

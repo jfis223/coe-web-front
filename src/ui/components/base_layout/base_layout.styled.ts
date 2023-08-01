@@ -3,6 +3,8 @@ import { colors } from "../../styles/colors";
 import { px2rem, flexCenter } from "@/src/ui/styles/utils";
 //import { spacing } from "../../styles/spacing";
 import { includeMedia, includeMaxMedia, breakpoints } from "@/src/ui/styles/breakpoints";
+import { spacing } from "@/src/ui/styles/spacing";
+import { typography } from "@/src/ui/styles/typography";
 
 const Wrapper = styled.div`
   display: flex;
@@ -35,10 +37,36 @@ const Footer = styled.footer`
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  background-color: ${colors.white};
+  background: linear-gradient(171deg, rgba(34, 51, 137, 1) 0%, rgba(34, 85, 137, 1) 100%);
+  border-top: 1px solid ${colors.gray};
   color: ${colors.white};
-  height: ${px2rem(120)};
   z-index: 1;
+`;
+
+const FooterContent = styled.div`
+  max-width: ${px2rem(breakpoints.ml + "px")};
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+const FooterHalfWidthContent = styled.div`
+  width: 50%;
+  padding: ${px2rem(spacing.size5)} 0;
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+`;
+
+const FooterFullWidth = styled.p`
+  width: 100%;
+  text-align: center;
+  padding: ${px2rem(spacing.size5)} 0;
 `;
 
 const Nav = styled.nav`
@@ -59,11 +87,11 @@ const Nav = styled.nav`
   margin: auto;
   display: flex;
   align-items: center;
-  padding: 0  ${px2rem(16)};
+  padding: 0 ${px2rem(16)};
 `;
 
 const MainHeader = styled.div`
-  max-width: ${px2rem(breakpoints.ml + 'px')};
+  max-width: ${px2rem(breakpoints.ml + "px")};
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -76,15 +104,15 @@ const MainHeaderCategories = styled.div`
   justify-content: flex-start;
   font-size: ${px2rem(16)};
   ${includeMedia(
-      "lm",
-      css`
-        margin-left: ${px2rem(-16)};
+    "lm",
+    css`
+      margin-left: ${px2rem(-16)};
     `
   )};
   ${includeMaxMedia(
-      "lm",
-      css`
-        margin-left: ${px2rem(24)};
+    "lm",
+    css`
+      margin-left: ${px2rem(24)};
     `
   )};
 `;
@@ -120,6 +148,36 @@ const MenuIcon = styled.div`
   }
 `;
 
+const AnimatedIcon = styled.div`
+  font-size: 0;
+  button {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    ${flexCenter};
+    color: ${colors.white};
+    ${typography.bodyM}
+  }
+  svg {
+    margin: ${px2rem(spacing.size2)} 0 ${px2rem(spacing.size2)} ${px2rem(spacing.size2)};
+    ${includeMedia(
+      "sm",
+      css`
+        width: ${px2rem(24)};
+        height: ${px2rem(27)};
+      `
+    )}
+    width: ${px2rem(30)};
+    height: ${px2rem(30)};
+    > * {
+      fill: ${colors.white};
+    }
+  }
+  a {
+    width: inherit;
+    height: inherit;
+  }
+`;
 
 const BaseLayoutStyled = {
   Wrapper,
@@ -129,7 +187,11 @@ const BaseLayoutStyled = {
   MainHeaderCategories,
   MainLogo,
   MenuIcon,
-  MainHeaderRightWrapper
+  MainHeaderRightWrapper,
+  FooterContent,
+  FooterFullWidth,
+  FooterHalfWidthContent,
+  AnimatedIcon
 };
 
 export default BaseLayoutStyled;

@@ -2,5 +2,8 @@
   "whatsAppMessage": "Me gustaría pedir cita en el Centro Oftalmológico del Este",
   "email": "Contacto",
   "team": "Nuestro equipo",
-  "uniqueInUruguay": "Único en Uruguay"
+  "uniqueInUruguay": "Único en Uruguay",
+  "copyright": "© Copyright {{year}} Centro Oftalmológico del Este - Todos los derechos reservados.",
+  "whatsAppTitle": "Pedir cita por WhatsApp",
+  "whatsAppTime": "Horario de atención: {{from}} a {{to}}"
 }
