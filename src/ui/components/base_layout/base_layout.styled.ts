@@ -46,21 +46,38 @@ const Footer = styled.footer`
 const FooterContent = styled.div`
   max-width: ${px2rem(breakpoints.ml + "px")};
   width: 100%;
-  margin: 0 auto;
+  margin: ${px2rem(spacing.size8)} auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  ${includeMedia(
+    "lm",
+    css`
+      margin: 0 auto;
+    `
+  )};
 `;
 
 const FooterHalfWidthContent = styled.div`
-  width: 50%;
+  width: 100%;
+  margin: 0 ${px2rem(16)};
   padding: ${px2rem(spacing.size5)} 0;
   > div {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
   }
+  ${includeMedia(
+    "lm",
+    css`
+      margin: 0;
+      width: 50%;
+      > div {
+        align-items: flex-end;
+      }
+    `
+  )};
 `;
 
 const FooterFullWidth = styled.p`

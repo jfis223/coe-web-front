@@ -9,6 +9,8 @@ export const TYPES = {
   GetCMSPageBySlugUseCase: Symbol("GetCMSPageBySlugUseCase"),
   ICMSMenusRepository: Symbol("ICMSMenusRepository"),
   GetCMSMenuBySlugUseCase: Symbol("GetCMSMenuBySlugUseCase"),
+  ICMSClinicsRepository: Symbol("ICMSClinicsRepository"),
+  GetCMSClinicsUseCase: Symbol("GetCMSClinicsUseCase"),
 
   TagManagerService: Symbol("TagManagerService"),
   JSONPlaceholderService: Symbol("JSONPlaceholderService"),
