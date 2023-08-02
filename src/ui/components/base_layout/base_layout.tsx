@@ -20,7 +20,6 @@ export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMS
   const setShowMobileMenu = useIsMobileProvider((state) => state.setShowMobileMenu);
   const clinics = useSettingsProvider((state) => state.clinics);
   const { t } = useTranslation();
-  console.log(clinics);
   return (
     <Styled.Wrapper>
       <Styled.Nav>

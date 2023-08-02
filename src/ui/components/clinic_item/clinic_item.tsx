@@ -7,7 +7,6 @@ interface Props {
 }
 
 export const ClinicItem = ({ clinic }: Props) => {
-  console.log(clinic.attributes.location);
   return (
     <Styled.Wrapper>
       <Styled.Text>

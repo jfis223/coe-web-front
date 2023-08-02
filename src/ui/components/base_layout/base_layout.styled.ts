@@ -22,6 +22,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     z-index: 1;
     overflow-y: hidden;
+    width: 100%;
   }
   canvas {
     position: absolute;
