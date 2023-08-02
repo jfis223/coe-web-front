@@ -14,6 +14,7 @@ import { useIsMobileProvider } from "@/src/ui/providers/is_mobile.provider";
 import { appWithTranslation } from "next-i18next";
 import { useEffect } from "react";
 import getCMSSettingsController from "@/src/ui/controllers/get_cms_settings_controller";
+import getCMSClinicsController from "@/src/ui/controllers/get_cms_clinics_controller";
 
 // Conditionally inject axe into the page.
 // This only happens outside of production and in a browser (not SSR).
@@ -54,6 +55,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   useEffect(() => {
     window.dispatchEvent(new Event("resize"));
     getCMSSettingsController().catch(console.error);
+    getCMSClinicsController().catch(console.error);
   }, []);
 
   return (

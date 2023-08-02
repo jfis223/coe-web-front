@@ -69,7 +69,7 @@ class CMSClinicAttributes {
 }
 
 export class CMSClinic {
-  id: string;
+  id: number;
   attributes: CMSClinicAttributes;
 
   constructor(input: ConstructorType<CMSClinic>) {

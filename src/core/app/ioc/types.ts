@@ -10,7 +10,7 @@ export const TYPES = {
   ICMSMenusRepository: Symbol("ICMSMenusRepository"),
   GetCMSMenuBySlugUseCase: Symbol("GetCMSMenuBySlugUseCase"),
   ICMSClinicsRepository: Symbol("ICMSClinicsRepository"),
-  GetCMSClinicUseCase: Symbol("GetCMSClinicUseCase"),
+  GetCMSClinicsUseCase: Symbol("GetCMSClinicsUseCase"),
 
   TagManagerService: Symbol("TagManagerService"),
   JSONPlaceholderService: Symbol("JSONPlaceholderService"),

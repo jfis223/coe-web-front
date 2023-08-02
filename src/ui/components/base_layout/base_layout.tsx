@@ -11,14 +11,16 @@ import { Orbs } from "@/src/ui/components/orbs/components/orbs";
 import { useTranslation } from "next-i18next";
 import { useSettingsProvider } from "@/src/ui/providers/settings.provider";
 import ReactWhatsapp from "react-whatsapp";
+import { ClinicItem } from "@/src/ui/components/clinic_item/clinic_item";
 
 export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMSMenu }>) => {
   const isMobile = useIsMobileProvider((state) => state.isMobile);
   const settings = useSettingsProvider((state) => state.settings);
   const showMobileMenu = useIsMobileProvider((state) => state.showMobileMenu);
   const setShowMobileMenu = useIsMobileProvider((state) => state.setShowMobileMenu);
+  const clinics = useSettingsProvider((state) => state.clinics);
   const { t } = useTranslation();
-
+  console.log(clinics);
   return (
     <Styled.Wrapper>
       <Styled.Nav>
@@ -37,7 +39,11 @@ export const BaseLayout = ({ children, header }: PropsWithChildren<{ header: CMS
       <main>{children}</main>
       <Styled.Footer>
         <Styled.FooterContent>
-          <Styled.FooterHalfWidthContent></Styled.FooterHalfWidthContent>
+          <Styled.FooterHalfWidthContent>
+            {clinics?.map((clinic, index) => {
+              return <ClinicItem clinic={clinic} key={index} />;
+            })}
+          </Styled.FooterHalfWidthContent>
           <Styled.FooterHalfWidthContent>
             <div>
               <Styled.AnimatedIcon>

@@ -46,11 +46,17 @@ const Footer = styled.footer`
 const FooterContent = styled.div`
   max-width: ${px2rem(breakpoints.ml + "px")};
   width: 100%;
-  margin: 0 auto;
+  margin: ${px2rem(spacing.size8)} auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  ${includeMedia(
+    "lm",
+    css`
+      margin: 0 auto;
+    `
+  )};
 `;
 
 const FooterHalfWidthContent = styled.div`
