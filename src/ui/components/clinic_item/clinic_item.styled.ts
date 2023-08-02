@@ -6,6 +6,11 @@ import { px2rem } from "@/src/ui/styles/utils";
 
 const Wrapper = styled.div`
   margin-bottom: ${px2rem(spacing.size2)};
+  p {
+    display: flex;
+    align-items: center;
+    gap: ${px2rem(spacing.size2)};
+  }
   ${includeMedia(
     "lm",
     css`
