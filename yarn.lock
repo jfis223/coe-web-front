@@ -5913,8 +5913,8 @@ __metadata:
     react-dom: 18.2.0
     react-error-boundary: ^4.0.10
     react-i18next: ^13.0.1
+    react-photo-album: ^2.2.2
     react-player: ^2.12.0
-    react-responsive-masonry: ^2.1.7
     react-transition-group: ^4.4.5
     react-whatsapp: ^0.3.0
     reflect-metadata: 0.1.13
@@ -6776,6 +6776,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-photo-album@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "react-photo-album@npm:2.2.2"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 7fbaaf7870003b0e93eca2850932c903fec429c8e23c27237de2ade20fbb5556d80a98cffb3c5b2bef1e985cc1da7ee238ad8028901640e75fd3b44f7dcf10d4
+  languageName: node
+  linkType: hard
+
 "react-player@npm:^2.12.0":
   version: 2.12.0
   resolution: "react-player@npm:2.12.0"
@@ -6788,13 +6797,6 @@ __metadata:
   peerDependencies:
     react: ">=16.6.0"
   checksum: 77d3e55ed67cd9c1e2300a990d8015d270072daad41f8a0750c32748f3fbfbc5bd2a2f06e78ac6828c2260b84537b9571d0abac31d3e888b74a3dccb59a56365
-  languageName: node
-  linkType: hard
-
-"react-responsive-masonry@npm:^2.1.7":
-  version: 2.1.7
-  resolution: "react-responsive-masonry@npm:2.1.7"
-  checksum: d8fd1838f73554809ecf2fbb29605abdd40eecaeb09caf549ea674e7e319e02fa7ff7aae978914b16f3a5f802d03a16402765a093e0bbb1d782665fd41632d97
   languageName: node
   linkType: hard
 
