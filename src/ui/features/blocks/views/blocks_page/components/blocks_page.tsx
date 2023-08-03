@@ -10,6 +10,7 @@ import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/component
 import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_block";
 import { AccordionBlock } from "@/src/ui/features/blocks/views/accordion_block/components/accordion_block";
 import { GalleryBlock } from "@/src/ui/features/blocks/views/gallery_block/components/gallery_block";
+import { ClinicsBlock } from "@/src/ui/features/blocks/views/clinics_block/components/clinics_block";
 import { ErrorBoundary } from "react-error-boundary";
 
 const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
@@ -19,7 +20,8 @@ const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
   "blocks.slider": SliderBlock,
   "blocks.team": TeamsBlock,
   "blocks.text": TextBlock,
-  "blocks.video": VideoBlock
+  "blocks.video": VideoBlock,
+  "blocks.clinics": ClinicsBlock
 };
 
 type Props = {
