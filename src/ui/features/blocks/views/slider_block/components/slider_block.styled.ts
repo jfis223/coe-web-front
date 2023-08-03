@@ -14,7 +14,7 @@ const Wrapper = styled.section`
   overflow: hidden;
   background-color: ${colors.white};
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: ${px2rem(spacing.size5)} auto;

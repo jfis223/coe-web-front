@@ -15,7 +15,7 @@ const Wrapper = styled.section`
   justify-content: center;
   gap: ${px2rem(spacing.size2)};
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: ${px2rem(spacing.size5)} auto;
@@ -44,7 +44,7 @@ const Card = styled.div`
     `
   )};
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       justify-content: center;
       width: calc(25% - ${px2rem(spacing.size2)});

@@ -58,7 +58,7 @@ const AccordionBody = styled.div<TransitionProps>`
   flex-direction: column-reverse;
   gap: ${px2rem(spacing.size6)};
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       flex-direction: row;
     `
@@ -91,7 +91,7 @@ const AccordionBody = styled.div<TransitionProps>`
     max-width: ${px2rem(350)};
     width: 100%;
     ${includeMedia(
-      "ml",
+      "lm",
       css`
         max-width: ${px2rem(500)};
         width: unset;

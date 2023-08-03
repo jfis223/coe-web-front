@@ -41,7 +41,7 @@ export const GalleryBlock = ({ images }: CMSGallery) => {
         layout="rows"
         photos={parsedImages ?? []}
         renderPhoto={NextJsImage}
-        defaultContainerWidth={breakpoints.ml}
+        defaultContainerWidth={breakpoints.lm}
         sizes={{ size: "calc(100vw - 240px)" }}
       />
     </Styled.Wrapper>

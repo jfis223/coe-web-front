@@ -14,7 +14,7 @@ const Wrapper = styled.section`
   justify-content: center;
   gap: ${px2rem(spacing.size2)};
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: ${px2rem(spacing.size5)} auto;
@@ -71,7 +71,7 @@ const Body = styled.div`
       ${typography.headingXL}
     }
     ${includeMedia(
-      "ml",
+      "lm",
       css`
         margin: ${px2rem(spacing.size8)} 0;
         width: 60%;

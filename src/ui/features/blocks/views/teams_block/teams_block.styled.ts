@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   position: relative;
   ${flexCenter}
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: ${px2rem(spacing.size5)} auto;

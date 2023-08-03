@@ -11,7 +11,7 @@ const Wrapper = styled.section`
   flex-wrap: wrap;
   justify-content: center;
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: 0 auto;

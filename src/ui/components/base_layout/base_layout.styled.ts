@@ -18,7 +18,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: ${px2rem(80)} 0;
-    max-width: ${px2rem(breakpoints.ml)};
+    max-width: ${px2rem(breakpoints.lm)};
     margin: 0 auto;
     z-index: 1;
     overflow-y: hidden;
@@ -45,7 +45,7 @@ const Footer = styled.footer`
 `;
 
 const FooterContent = styled.div`
-  max-width: ${px2rem(breakpoints.ml + "px")};
+  max-width: ${px2rem(breakpoints.lm + "px")};
   width: 100%;
   margin: ${px2rem(spacing.size8)} auto 0 auto;
   display: flex;
@@ -109,7 +109,7 @@ const Nav = styled.nav`
 `;
 
 const MainHeader = styled.div`
-  max-width: ${px2rem(breakpoints.ml + "px")};
+  max-width: ${px2rem(breakpoints.lm + "px")};
   width: 100%;
   margin: 0 auto;
   display: flex;

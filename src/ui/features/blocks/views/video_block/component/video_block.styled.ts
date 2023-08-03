@@ -17,7 +17,7 @@ const Wrapper = styled.section`
   border-radius: ${px2rem(spacing.size5)};
   aspect-ratio: 16 / 9;
   ${includeMedia(
-    "ml",
+    "lm",
     css`
       width: 100%;
       margin: ${px2rem(spacing.size5)} auto;
