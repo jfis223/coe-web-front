@@ -5921,6 +5921,7 @@ __metadata:
     simplex-noise: ^4.0.1
     styled-components: 5.3.9
     typescript: 5.0.4
+    yet-another-react-lightbox: ^3.12.0
     yup: 1.1.1
     zustand: 4.3.8
   languageName: unknown
@@ -8308,6 +8309,16 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^21.0.0
   checksum: 604bdb4a6395a870540d2f3fea083c8e28441f12da8fd05b172b1e68480f00ed73d76be4a05fac19de9bf55ec7729b41e81cf555cccaed700aa192e4fff64872
+  languageName: node
+  linkType: hard
+
+"yet-another-react-lightbox@npm:^3.12.0":
+  version: 3.12.0
+  resolution: "yet-another-react-lightbox@npm:3.12.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: fe88d33710826d4b2a76c259ee492f2aa5dfd4949e4ecfa87451fc6332c855bbcc50de0dc68dbf8b4998cbf063ed19a1a587fe1ac772178f987515da6e7ffa6c
   languageName: node
   linkType: hard
 
