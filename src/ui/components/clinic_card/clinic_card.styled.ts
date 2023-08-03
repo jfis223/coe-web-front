@@ -41,14 +41,7 @@ const Wrapper = styled.div<Props>`
     color: ${colors.white};
   }
    div{
-    ${(props) =>
-      Boolean(props.even)
-        ? css`
-            width: 100%;
-          `
-        : css`
-            width: 100%;
-          `}
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
