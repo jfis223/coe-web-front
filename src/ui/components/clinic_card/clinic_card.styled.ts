@@ -27,40 +27,29 @@ const Wrapper = styled.div<Props>`
         `
       : css`
           flex-direction: row;
-        `}}
-  iframe {
-    border: 1px solid ${colors.main};
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: ${px2rem(spacing.size5)};
-    overflow: hidden;
+        `}
+  section {
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: ${px2rem(spacing.size8)};
+    ${includeMedia(
+      "lm",
+      css`
+        width: 50%;
+        align-self: unset;
+        margin-top: 0;
+      `
+    )};
   }
   p {
     display: flex;
     align-items: center;
     gap: ${px2rem(spacing.size2)};
     color: ${colors.white};
-  }
-   div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: ${px2rem(spacing.size8)};
-    ${(props) =>
-      Boolean(props.even)
-        ? css`
-            align-items: flex-end;
-          `
-        : css`
-            align-items: flex-start !important;
-          `}
-    ${includeMedia(
-      "lm",
-      css`
-        width: auto !important;
-        margin-top: unset;
-      `
-    )}
   }
 `;
 

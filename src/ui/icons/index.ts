@@ -6,5 +6,6 @@ import WhatsApp from "./whatsapp.svg";
 import Menu from "./menu.svg";
 import Location from "./location.svg";
 import Phone from "./phone.svg";
+import LogoLocation from "./logoLocation.svg";
 
-export { Logo, Close, Envelope, WhatsApp, Menu, Location, Phone, _Gradient };
+export { Logo, Close, Envelope, WhatsApp, Menu, Location, LogoLocation, Phone, _Gradient };
