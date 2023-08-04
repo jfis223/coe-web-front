@@ -21,10 +21,10 @@ const Page: NextPageWithLayout = ({ page }: Props) => {
   return (
     <>
       <Head>
-        <title>{`${page.attributes.title} - Centro Oftalmológico del Este`}</title>
-        <meta name="description" content={page.attributes.description} />
-        <meta property="og:title" content={`${page.attributes.title} - Centro Oftalmológico del Este`} />
-        <meta property="og:description" content={`${page.attributes.description}`} />
+        <title>{`${page?.attributes?.title ?? ""} - Centro Oftalmológico del Este`}</title>
+        <meta name="description" content={page?.attributes?.description ?? ""} />
+        <meta property="og:title" content={`${page?.attributes?.title ?? ""} - Centro Oftalmológico del Este`} />
+        <meta property="og:description" content={`${page?.attributes?.description ?? ""}`} />
       </Head>
       <BlocksPage blocks={page?.attributes?.blocks} />
     </>
