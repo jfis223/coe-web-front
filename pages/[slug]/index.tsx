@@ -1,6 +1,5 @@
 import type { ReactElement } from "react";
 import { BaseLayout } from "@/src/ui/components/base_layout/base_layout";
-//import {AppErrorBoundary} from "@/src/ui/components/app_error_boundary/app_error_boundary";
 import { ErrorBoundary } from "react-error-boundary";
 import type { GetStaticProps, GetStaticPaths } from "next";
 import { locator } from "@/src/core/app/ioc";
@@ -12,13 +11,23 @@ import type { CMSPage } from "@/src/core/cms_pages/domain/models/cms_page";
 import type { NextPageWithLayout } from "@/src/ui/@types/page";
 import type { GetCMSMenuBySlugUseCase } from "@/src/core/cms_menus/domain/use_cases/get_cms_menu_by_slug_use_case";
 import BlocksPage from "@/src/ui/features/blocks/views/blocks_page/components/blocks_page";
+import Head from "next/head";
 
 type Props = {
   page: CMSPage;
 };
 
 const Page: NextPageWithLayout = ({ page }: Props) => {
-  return <BlocksPage blocks={page?.attributes?.blocks} />;
+  return (
+    <>
+      <Head>
+        <title>{`${page.attributes.title} - Centro Oftalmológico del Este`}</title>
+        <meta property="og:title" content={`${page.attributes.title} - Centro Oftalmológico del Este`} />
+        {/*TODO Description*/}
+      </Head>
+      <BlocksPage blocks={page?.attributes?.blocks} />
+    </>
+  );
 };
 
 export default Page;

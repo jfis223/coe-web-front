@@ -72,7 +72,7 @@ const FooterHalfWidthContent = styled.div`
   ${includeMedia(
     "lm",
     css`
-      margin: 0;
+      margin: ${px2rem(spacing.size5)} 0 0 0;
       width: 50%;
       > div {
         align-items: flex-end;
