@@ -1,55 +1,26 @@
 import styled from "styled-components";
-import { colors } from "../../styles/colors";
-import { px2rem } from "@/src/ui/styles/utils";
 
 const LoaderStyled = styled.div`
   position: relative;
-  width: ${px2rem(10)};
-  height: ${px2rem(10)};
-  border-radius: ${px2rem(5)};
-  background-color: ${colors.codGray};
-  color: ${colors.codGray};
-  animation: dot-flashing 1s infinite linear alternate;
-  animation-delay: 0.5s;
+  width: 20%;
+  height: 20%;
 
-  &::before,
-  &::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
+  .st0 {
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation-name: logo;
+    animation: logo 1s infinite linear alternate;
+    animation-delay: 0.5s;
   }
-
-  &::before {
-    left: ${px2rem(-15)};
-    width: ${px2rem(10)};
-    height: ${px2rem(10)};
-    border-radius: ${px2rem(5)};
-    background-color: ${colors.codGray};
-    color: ${colors.codGray};
-    animation: dot-flashing 1s infinite alternate;
-    animation-delay: 0s;
-  }
-
-  &::after {
-    left: ${px2rem(15)};
-    width: ${px2rem(10)};
-    height: ${px2rem(10)};
-    border-radius: ${px2rem(5)};
-    background-color: ${colors.codGray};
-    color: ${colors.codGray};
-    animation: dot-flashing 1s infinite alternate;
-    animation-delay: 1s;
-  }
-
-  @keyframes dot-flashing {
+  @keyframes logo {
     0% {
-      background-color: ${colors.codGray};
+      stroke-dashoffset: 0;
     }
-
-    50%,
+    20% {
+      stroke-dashoffset: 0;
+    }
     100% {
-      background-color: ${colors.codGray};
+      stroke-dashoffset: 420;
     }
   }
 `;

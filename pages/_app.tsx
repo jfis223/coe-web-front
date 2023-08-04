@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
         {process.env.NODE_ENV === "production" && (
           <meta
             httpEquiv="Content-Security-Policy"
-            content="default-src 'self' googleapis.com youtube.com google.com coe-web-front.vercel.app coe-web-cms.fly.dev; style-src 'unsafe-inline'; object-src 'none'; img-src coe-web-front.vercel.app res.cloudinary.com; script-src 'self' youtube.com googleapis.com google.com https://www.youtube.com 'unsafe-inline' 'unsafe-eval' coe-web-front.vercel.app; child-src *; frame-src * youtube.com https://www.google.com google.com https://www.youtube.com;"
+            content="default-src 'self' googleapis.com youtube.com google.com coe-web-front.vercel.app coe-web-cms.fly.dev; style-src 'unsafe-inline'; object-src 'none'; img-src coe-web-front.vercel.app res.cloudinary.com; script-src 'self' youtube.com https://maps.googleapis.com maps.googleapis.com google.com https://www.youtube.com 'unsafe-inline' 'unsafe-eval' coe-web-front.vercel.app; child-src *; frame-src * youtube.com https://www.google.com google.com https://www.youtube.com;"
           />
         )}
         <meta httpEquiv="referrer" content="no-referrer, strict-origin-when-cross-origin" />
