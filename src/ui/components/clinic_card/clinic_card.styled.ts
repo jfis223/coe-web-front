@@ -36,12 +36,14 @@ const Wrapper = styled.div<Props>`
     justify-content: center;
     align-items: flex-start;
     margin-top: ${px2rem(spacing.size8)};
+    margin-left: 0;
     ${includeMedia(
       "lm",
       css`
         width: 50%;
         align-self: unset;
         margin-top: 0;
+        margin-left: ${px2rem(spacing.size8)};
       `
     )};
   }
