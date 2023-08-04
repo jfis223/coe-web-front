@@ -3,6 +3,7 @@ import { spacing } from "@/src/ui/styles/spacing";
 import { px2rem } from "@/src/ui/styles/utils";
 import { colors } from "@/src/ui/styles/colors";
 import { includeMedia } from "@/src/ui/styles/breakpoints";
+import { typography } from "@/src/ui/styles/typography";
 
 interface Props {
   even?: boolean;
@@ -37,21 +38,49 @@ const Wrapper = styled.div<Props>`
     align-items: flex-start;
     margin-top: ${px2rem(spacing.size8)};
     margin-left: 0;
+    h2,
+    a,
+    span {
+      color: ${colors.white};
+    }
     ${includeMedia(
       "lm",
       css`
-        width: 50%;
+        width: calc(50% - ${px2rem(spacing.size8)});
         align-self: unset;
         margin-top: 0;
         margin-left: ${px2rem(spacing.size8)};
       `
     )};
   }
-  p {
+  h2 {
+    ${typography.headingS};
+    font-weight: 600;
+
+    margin-bottom: ${px2rem(spacing.size4)};
+  }
+  a,
+  span,
+  div {
     display: flex;
     align-items: center;
     gap: ${px2rem(spacing.size2)};
     color: ${colors.white};
+    ${typography.bodyM};
+    margin-bottom: ${px2rem(spacing.size2)};
+    text-decoration: none;
+    justify-content: center;
+    ${includeMedia(
+      "lm",
+      css`
+        justify-content: flex-start;
+      `
+    )}
+    svg {
+      * {
+        fill: ${colors.white};
+      }
+    }
   }
 `;
 
