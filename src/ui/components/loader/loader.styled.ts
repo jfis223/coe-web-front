@@ -1,9 +1,13 @@
 import styled from "styled-components";
+import { absoluteCenter } from "@/src/ui/styles/utils";
 
 const LoaderStyled = styled.div`
   position: relative;
-  width: 20%;
-  height: 20%;
+  width: 50%;
+  height: 50%;
+  svg {
+    ${absoluteCenter};
+  }
 
   .st0 {
     stroke-dasharray: 420;
