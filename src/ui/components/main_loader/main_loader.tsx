@@ -6,7 +6,7 @@ import { LogoShapeOnly } from "@/src/ui/icons";
 export const MainLoader = () => {
   const showLoader = useUiProvider((state) => state.showLoader);
 
-  if (!showLoader)
+  if (showLoader)
     return (
       <Styled.Wrapper>
         <LoaderStyled>
