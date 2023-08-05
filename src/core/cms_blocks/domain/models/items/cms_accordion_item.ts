@@ -7,7 +7,7 @@ export class CMSAccordionItem {
   content: string;
   uniqueInUruguay: boolean;
   title: string;
-  linkList?: CMSVideoLinkList;
+  linkList?: CMSVideoLinkList[];
   image?: CMSImageItem;
 
   constructor(input: ConstructorType<CMSAccordionItem>) {

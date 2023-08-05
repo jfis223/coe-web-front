@@ -8,10 +8,13 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(0 0 0 / 20%);
+  background-color: rgb(0 0 0 / 85%);
   width: 100%;
   height: 100%;
   z-index: 9;
+  > div {
+    position: relative;
+  }
 `;
 
 const Content = styled.div`
@@ -27,13 +30,30 @@ const Content = styled.div`
 `;
 
 const CloseBtn = styled(IconButton)`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  svg {
+    * {
+      fill: ${colors.white};
+      stroke: ${colors.white};
+    }
+  }
+  background-color: ${colors.main};
+  &:hover {
+    background-color: ${colors.main};
+  }
+`;
+
+const CloseBtnAlt = styled(IconButton)`
   align-self: flex-end;
 `;
 
 const ModalStyled = {
   Wrapper,
   Content,
-  CloseBtn
+  CloseBtn,
+  CloseBtnAlt
 };
 
 export default ModalStyled;

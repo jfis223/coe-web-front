@@ -41,12 +41,16 @@ export const Modal = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modalShowing]);
 
-      if (modalShowing) return (
-        <Styled.Wrapper ref={modalRef}>
-                <div>{modalContent && cloneElement(modalContent as ReactElement, { ref: modalContentRef })}</div>
-        </Styled.Wrapper>
-      )
-  return null
+  if (modalShowing)
+    return (
+      <Styled.Wrapper ref={modalRef}>
+        <div>
+          <Styled.CloseBtn icon={<CloseIcon />} onClick={() => hideModal()} />
+          {modalContent && cloneElement(modalContent as ReactElement, { ref: modalContentRef })}
+        </div>
+      </Styled.Wrapper>
+    );
+  return null;
 };
 
 export const ModalContent = forwardRef<HTMLDivElement, PropsWithChildren<{ className?: string }>>(({ children, className }, ref) => {
@@ -54,7 +58,7 @@ export const ModalContent = forwardRef<HTMLDivElement, PropsWithChildren<{ class
 
   return (
     <Styled.Content ref={ref} className={className}>
-      <Styled.CloseBtn icon={<CloseIcon />} onClick={() => hideModal()} />
+      <Styled.CloseBtnAlt icon={<CloseIcon />} onClick={() => hideModal()} />
       {children}
     </Styled.Content>
   );
