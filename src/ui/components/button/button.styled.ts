@@ -9,7 +9,7 @@ const Wrapper = styled.button<ButtonProps>`
   border: none;
   outline: none;
   color: ${colors.white};
-  background-color: ${(props) => (props.disabled ? colors.gray : colors.main)};
+  background-color: ${(props) => (props.disabled ? colors.gray : props.isMain ? colors.secondary : colors.main)};
   cursor: pointer;
   position: relative;
   z-index: 0;
@@ -51,7 +51,7 @@ const Wrapper = styled.button<ButtonProps>`
     position: absolute;
     width: 100%;
     height: 100%;
-    background: ${colors.main};
+    background: ${(props) => (props.disabled ? colors.gray : props.isMain ? colors.secondary : colors.main)};
     left: 0;
     top: 0;
     border-radius: 10px;

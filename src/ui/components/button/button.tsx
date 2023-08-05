@@ -6,6 +6,7 @@ export interface ButtonProps {
   type?: "submit" | "reset" | "button";
   disabled?: boolean;
   className?: string;
+  isMain?: boolean;
 }
 
 export const Button = ({ className, children, onClick, type, disabled }: PropsWithChildren<ButtonProps>) => {

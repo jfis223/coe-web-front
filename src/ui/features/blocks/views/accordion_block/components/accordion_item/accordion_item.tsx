@@ -40,7 +40,7 @@ export const AccordionItem = ({ content, uniqueInUruguay, title, linkList, image
               {linkList &&
                 linkList?.map((link, index) => {
                   return (
-                    <Button key={index} onClick={() => showVideoModal(link.video)}>
+                    <Button key={index} onClick={() => showVideoModal(link.video)} isMain={link.isMain}>
                       <div dangerouslySetInnerHTML={{ __html: link.title }} />
                     </Button>
                   );
