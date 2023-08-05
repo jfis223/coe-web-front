@@ -6,6 +6,9 @@ export const BlocksTypeOptions = [
   "blocks.team",
   "blocks.text",
   "blocks.video",
-  "blocks.clinics"
+  "blocks.clinics",
+  "blocks.contact-form",
+  "blocks.contact-links",
+  "blocks.full-width-image"
 ] as const;
 export type BlocksTypeOptions = (typeof BlocksTypeOptions)[number];

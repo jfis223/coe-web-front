@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { px2rem } from "@/src/ui/styles/utils";
 import { spacing } from "@/src/ui/styles/spacing";
-import { includeMedia } from "@/src/ui/styles/breakpoints";
+import { includeMedia, includeMaxMedia } from "@/src/ui/styles/breakpoints";
 import { flexCenter } from "@/src/ui/styles/utils";
 import { colors } from "@/src/ui/styles/colors";
 import { typography } from "@/src/ui/styles/typography";
@@ -23,15 +23,101 @@ const Wrapper = styled.section`
       margin: ${px2rem(spacing.size5)} auto;
     `
   )};
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    gap: ${px2rem(spacing.size4)};
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
 `;
 
-const Card = styled.div`
+const WithBioWrapper = styled.div`
+  max-width: 100vw;
+  margin: ${px2rem(spacing.size5)};
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: ${px2rem(spacing.size2)};
+  position: relative;
+  ${flexCenter}
+  > div {
+    justify-content: center !important;
+  }
+  ${includeMedia(
+    "lm",
+    css`
+      width: 100%;
+      margin: ${px2rem(spacing.size5)} auto;
+    `
+  )};
+`;
+
+interface EvenProps {
+  even: boolean;
+}
+
+const Biography = styled.section<EvenProps>`
+  ${includeMedia(
+    "lm",
+    css`
+      max-width: calc(100% - ${px2rem(350)}) !important;
+      width: calc(100% - ${px2rem(450)}) !important;
+    `
+  )};
+  ${(props) =>
+    props.even
+      ? css`
+          margin-left: unset !important;
+          margin-right: ${px2rem(spacing.size8)};
+        `
+      : css`
+          margin-left: ${px2rem(spacing.size8)};
+          margin-right: unset !important;
+        `}
+  ${includeMaxMedia(
+    "lm",
+    css`
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    `
+  )};
+  * {
+    color: ${colors.white};
+    ${typography.bodyM};
+    flex-direction: column;
+    text-align: justify;
+  }
+`;
+
+interface Props {
+  isFounder: boolean;
+}
+
+const Card = styled.div<Props>`
   width: ${px2rem(350)};
-  border: 1px solid ${colors.main};
+  max-width: ${px2rem(350)};
+  ${({ isFounder }) =>
+    isFounder
+      ? css`
+          border: 2px solid ${colors.secondary};
+        `
+      : css`
+          border: 1px solid ${colors.main};
+        `}
   border-radius: ${px2rem(spacing.size2)};
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  img {
+    object-fit: cover;
+  }
 `;
 
 const GlassBackground = styled.div`
@@ -44,6 +130,7 @@ const GlassBackground = styled.div`
   opacity: 0.8;
   z-index: 1;
   border-top: 1px solid ${colors.variant};
+  margin-bottom: 0 !important;
 `;
 
 const Caption = styled.div`
@@ -54,6 +141,7 @@ const Caption = styled.div`
   width: 100%;
   padding: ${px2rem(spacing.size5)} ${px2rem(spacing.size3)};
   transition: padding 0.5s ease;
+  margin-bottom: 0 !important;
   ${flexCenter}
   &:hover {
     padding: ${px2rem(spacing.size8)} ${px2rem(spacing.size3)};
@@ -83,6 +171,6 @@ const MainTitle = styled.h3`
   font-weight: 600;
 `;
 
-const TeamsBlockStyled = { Wrapper, Card, Caption, Title, Subtitle, GlassBackground, MainTitle };
+const TeamsBlockStyled = { Wrapper, Card, Caption, Title, Subtitle, GlassBackground, MainTitle, WithBioWrapper, Biography };
 
 export default TeamsBlockStyled;

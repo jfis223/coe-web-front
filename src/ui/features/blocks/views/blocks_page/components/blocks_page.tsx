@@ -11,6 +11,9 @@ import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_blo
 import { AccordionBlock } from "@/src/ui/features/blocks/views/accordion_block/components/accordion_block";
 import { GalleryBlock } from "@/src/ui/features/blocks/views/gallery_block/components/gallery_block";
 import { ClinicsBlock } from "@/src/ui/features/blocks/views/clinics_block/components/clinics_block";
+import { ContactFormBlock } from "@/src/ui/features/blocks/views/contact_form_block/components/contact_form_block";
+import { ContactLinksBlock } from "@/src/ui/features/blocks/views/contact_links_block/components/contact_links_block";
+import { FullWidthImageBlock } from "@/src/ui/features/blocks/views/full_width_image_block/components/full_width_image_block";
 import { ErrorBoundary } from "react-error-boundary";
 
 const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
@@ -21,7 +24,10 @@ const componentMap: Record<BlocksTypeOptions, (props: any) => JSX.Element> = {
   "blocks.team": TeamsBlock,
   "blocks.text": TextBlock,
   "blocks.video": VideoBlock,
-  "blocks.clinics": ClinicsBlock
+  "blocks.clinics": ClinicsBlock,
+  "blocks.contact-form": ContactFormBlock,
+  "blocks.contact-links": ContactLinksBlock,
+  "blocks.full-width-image": FullWidthImageBlock
 };
 
 type Props = {

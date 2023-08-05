@@ -5,5 +5,6 @@
   "uniqueInUruguay": "Único en Uruguay",
   "copyright": "© Copyright {{year}} Centro Oftalmológico del Este - Todos los derechos reservados.",
   "whatsAppTitle": "Pedir cita por WhatsApp",
-  "whatsAppTime": "Horario de atención: {{from}} a {{to}}"
+  "whatsAppTime": "Horario de atención: {{from}} a {{to}}",
+  "founder": "Fundador"
 }

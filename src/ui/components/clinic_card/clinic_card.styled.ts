@@ -7,11 +7,11 @@ import { typography } from "@/src/ui/styles/typography";
 
 interface Props {
   even?: boolean;
+  isFounder?: boolean;
 }
 
 const Wrapper = styled.div<Props>`
   margin-bottom: ${px2rem(spacing.size2)};
-  background: linear-gradient(171deg, rgba(34, 51, 137, 0.8) 0%, rgba(34, 85, 137, 0.8) 100%);
   padding: ${px2rem(spacing.size8)};
   border: 1px solid ${colors.white};
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -21,6 +21,14 @@ const Wrapper = styled.div<Props>`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  ${(props) =>
+    props.isFounder
+      ? css`
+          background: linear-gradient(171deg, rgba(34, 51, 137, 0.8) 0%, rgba(34, 138, 96, 0.8) 100%);
+        `
+      : css`
+          background: linear-gradient(171deg, rgba(34, 51, 137, 0.8) 0%, rgba(34, 85, 137, 0.8) 100%);
+        `}
   ${(props) =>
     props.even
       ? css`
