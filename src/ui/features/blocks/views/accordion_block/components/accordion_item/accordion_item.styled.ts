@@ -57,6 +57,9 @@ const AccordionBody = styled.div<TransitionProps>`
   justify-content: space-between;
   flex-direction: column-reverse;
   gap: ${px2rem(spacing.size6)};
+  button {
+    margin: 0 ${px2rem(spacing.size2)};
+  }
   ${includeMedia(
     "lm",
     css`
