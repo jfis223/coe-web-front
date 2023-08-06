@@ -6,7 +6,7 @@ import type { CMSBlock } from "@/src/core/cms_blocks/domain/models/cms_block";
 import { SliderBlock } from "@/src/ui/features/blocks/views/slider_block/components/slider_block";
 import { IconTextListBlock } from "@/src/ui/features/blocks/views/icon_text_list_block/components/icon_text_list_block";
 import { TextBlock } from "@/src/ui/features/blocks/views/text_block/components/text_block";
-import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/component/video_block";
+import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/components/video_block";
 import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_block";
 import { AccordionBlock } from "@/src/ui/features/blocks/views/accordion_block/components/accordion_block";
 import { GalleryBlock } from "@/src/ui/features/blocks/views/gallery_block/components/gallery_block";
