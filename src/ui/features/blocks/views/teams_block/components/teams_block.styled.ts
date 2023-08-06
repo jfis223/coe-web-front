@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { px2rem } from "@/src/ui/styles/utils";
 import { spacing } from "@/src/ui/styles/spacing";
-import { includeMedia, includeMaxMedia } from "@/src/ui/styles/breakpoints";
+import { includeMedia, includeMaxMedia, breakpoints } from "@/src/ui/styles/breakpoints";
 import { flexCenter } from "@/src/ui/styles/utils";
 import { colors } from "@/src/ui/styles/colors";
 import { typography } from "@/src/ui/styles/typography";
@@ -24,14 +24,22 @@ const Wrapper = styled.section`
     `
   )};
   .embla {
+    max-width: calc(100vw - ${px2rem(spacing.size5)} - ${px2rem(spacing.size5)});
     overflow: hidden;
+    ${includeMedia(
+      "lm",
+      css`
+        max-width: ${px2rem(breakpoints.lm)};
+      `
+    )};
   }
   .embla__container {
     display: flex;
     gap: ${px2rem(spacing.size4)};
   }
   .embla__slide {
-    flex: 0 0 100%;
+    flex: 0 0 ${px2rem(350)};
+    max-width: 100%;
     min-width: 0;
   }
 `;
@@ -49,6 +57,14 @@ const WithBioWrapper = styled.div`
   ${flexCenter}
   > div {
     justify-content: center !important;
+    max-width: 100%;
+    padding: ${px2rem(spacing.size7)};
+    ${includeMedia(
+      "lm",
+      css`
+        padding: ${px2rem(spacing.size10)};
+      `
+    )};
   }
   ${includeMedia(
     "lm",
@@ -101,7 +117,7 @@ interface Props {
 }
 
 const Card = styled.div<Props>`
-  width: ${px2rem(350)};
+  width: 100%;
   max-width: ${px2rem(350)};
   ${({ isFounder }) =>
     isFounder
