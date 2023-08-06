@@ -7,7 +7,7 @@ import { SliderBlock } from "@/src/ui/features/blocks/views/slider_block/compone
 import { IconTextListBlock } from "@/src/ui/features/blocks/views/icon_text_list_block/components/icon_text_list_block";
 import { TextBlock } from "@/src/ui/features/blocks/views/text_block/components/text_block";
 import { VideoBlock } from "@/src/ui/features/blocks/views/video_block/components/video_block";
-import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/teams_block";
+import { TeamsBlock } from "@/src/ui/features/blocks/views/teams_block/components/teams_block";
 import { AccordionBlock } from "@/src/ui/features/blocks/views/accordion_block/components/accordion_block";
 import { GalleryBlock } from "@/src/ui/features/blocks/views/gallery_block/components/gallery_block";
 import { ClinicsBlock } from "@/src/ui/features/blocks/views/clinics_block/components/clinics_block";
