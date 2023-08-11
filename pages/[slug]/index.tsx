@@ -56,6 +56,31 @@ export const getStaticPaths: GetStaticPaths = async () => {
         params: {
           slug: "home"
         }
+      },
+      {
+        params: {
+          slug: "nuestros-centros"
+        }
+      },
+      {
+        params: {
+          slug: "contacto"
+        }
+      },
+      {
+        params: {
+          slug: "quienes-somos"
+        }
+      },
+      {
+        params: {
+          slug: "tecnologias"
+        }
+      },
+      {
+        params: {
+          slug: "tratamientos"
+        }
       }
     ],
     fallback: true
