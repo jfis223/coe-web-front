@@ -64,7 +64,7 @@
     "@types/google-map-react": "^2.1.7",
     "@types/lodash": "4.14.194",
     "@types/node": "20.1.5",
-    "@types/react": "18.2.18",
+    "@types/react": "^18.2.20",
     "@types/react-redux": "7.1.25",
     "@types/react-transition-group": "^4.4.6",
     "@types/styled-components": "5.1.26",
@@ -82,7 +82,7 @@
     "typescript": "5.0.4"
   },
   "resolutions": {
-    "@types/react": "^18.2.18"
+    "@types/react": "^18.2.20"
   },
   "packageManager": "yarn@3.2.1"
 }
